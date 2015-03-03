@@ -6,9 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+   Background="White">
+    <Page.Resources>
+        <Style x:Key="tbkPageTitles" TargetType="TextBlock">            
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="60"/> 
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="20"/>
+            
+        </Style>
+        
+    </Page.Resources>    
 
     <Grid>
-
+        <StackPanel Height="640" VerticalAlignment="Bottom">
+            <Border Width="200" HorizontalAlignment="Center" Background="#FF3F59FF"
+                    CornerRadius="15">
+            <TextBlock Text="Let's get started" Style="{StaticResource tbkPageTitles}" Margin="3,0,-3,0"
+                       >
+            	
+            </TextBlock>
+            </Border>
+        </StackPanel>
+        
     </Grid>
 </Page>

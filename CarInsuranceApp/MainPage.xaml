@@ -13,21 +13,57 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="60"/> 
             <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="20"/>
-            
+            <Setter Property="Padding" Value="20"/>            
         </Style>
-        
+        <Style x:Key="tbkHeadings" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+        </Style>
+        <Style x:Key="cmbDropdowns" TargetType="ComboBox">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="BorderBrush" Value="#FF424141"/>
+            <Setter Property="BorderThickness" Value="1"/>            
+        </Style>
+        <Style x:Key="btnNext" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Background" Value="#FF0E9900"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+        </Style>
+
     </Page.Resources>    
 
     <Grid>
-        <StackPanel Height="640" VerticalAlignment="Bottom">
+        <TextBlock Text="Quick Car Insurance Quote" Foreground="#FF424141"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   Margin="0,10" Height="60" Width="320" FontFamily="Kartika" FontSize="21" 
+                   Padding="20"/>
+        <StackPanel Margin="0,100,0,0">
             <Border Width="200" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">
-            <TextBlock Text="Let's get started" Style="{StaticResource tbkPageTitles}" Margin="3,0,-3,0"
-                       >
-            	
-            </TextBlock>
+                <TextBlock Text="Let's get started!" Style="{StaticResource tbkPageTitles}" Margin="3,0,-3,0"
+                       />
             </Border>
+            <Border>
+                <TextBlock Text="Insurance cover type" Style="{StaticResource tbkHeadings}" 
+                           Margin="0,30,0,0"/>
+            </Border>
+            
+            <ComboBox Name="cmbCoverType" Style="{StaticResource cmbDropdowns}"/>
+            <Border>
+                <TextBlock Text="Vehicle location" Style="{StaticResource tbkHeadings}" 
+                           Margin="0,10,0,0"/>
+            </Border>
+            <ComboBox Name="cmbVehicleLoc" Style="{StaticResource cmbDropdowns}"/>
+            
+            <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
+                    HorizontalAlignment="Center" 
+                    />
+            
         </StackPanel>
         
     </Grid>

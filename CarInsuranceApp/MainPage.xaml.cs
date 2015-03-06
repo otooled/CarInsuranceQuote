@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +23,14 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MobileServiceCollection<ServiceClass.Location> counties;
+        private IMobileServiceTable<ServiceClass.Location> counties_table = App.MobileService.GetTable<ServiceClass.Location>();
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            
         }
 
         /// <summary>

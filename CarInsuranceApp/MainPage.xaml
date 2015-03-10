@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-   Background="White">
+   Background="White" Loaded="Page_Loaded">
     <Page.Resources>
         <Style x:Key="tbkPageTitles" TargetType="TextBlock">            
             <Setter Property="Foreground" Value="White"/>
@@ -51,7 +51,7 @@
         <StackPanel Margin="0,100,0,0">
             <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">
-                <TextBlock Style="{StaticResource tbkPageTitles}" Margin="3,0,-3,0"> <!--Text="Let's get started!"--> 
+                <TextBlock Style="{StaticResource tbkPageTitles}" Margin="3,0,-3,0">  
                    <Run Text="Let's get started!"/>
                     <LineBreak/>
                     <Run Text="Choose your options below"/>
@@ -73,8 +73,10 @@
             
             <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
                     HorizontalAlignment="Center" Margin="0,20,0,0"
-                    />            
+                    Click="btnNext_Click"/>
+            <TextBox Name="tbxTest" Background="Beige"/>
         </StackPanel>
+        <TextBlock Name="tbkTest" HorizontalAlignment="Left" Margin="205,574,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         
     </Grid>
 </Page>

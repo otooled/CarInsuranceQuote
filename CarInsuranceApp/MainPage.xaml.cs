@@ -25,6 +25,8 @@ namespace CarInsuranceApp
     {
         private MobileServiceCollection<ServiceClass.Location> counties;
         private IMobileServiceTable<ServiceClass.Location> counties_table = App.MobileService.GetTable<ServiceClass.Location>();
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -47,6 +49,26 @@ namespace CarInsuranceApp
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            //var x = await counties_table.ToCollectionAsync();
+            //foreach (var items in x)
+            //{
+            //    tbxTest.Text = x.ToString();
+
+            //}
+
+           
+            
+            //tbxTest.Text = "hello";
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CarDetails));
         }
     }
 }

@@ -54,15 +54,37 @@
                     <Run Text="Enter your car registration below"/>
                 </TextBlock>
             </Border>
-            <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBox Name="tbxCarReg" Width="150" Height="10"
+            <StackPanel Orientation="Horizontal" Margin="20,50,0,50">
+            <TextBox Name="tbxCarReg" Width="160" Height="40"
                      HorizontalAlignment="Left" BorderThickness="2"
-                     BorderBrush="Gray" Margin="20,10,0,0"/>
+                     BorderBrush="Gray" Margin="20,10,0,0" 
+                     PlaceholderText="Car Registration"/>
 
             <Button Name="btnGetCarDets" Content="Get Car Details"
-                    Style="{StaticResource btnNext}" Margin="20,0,0,0"
-                    HorizontalAlignment="Right" Width="150" Height="10"
+                    Background="Aquamarine" Margin="10,-2,0,0"
+                    HorizontalAlignment="Right" Width="155" 
+                    Height="65" Click="btnGetCarDets_Click"
                     />
+                
+            </StackPanel>
+            <StackPanel Name="stkConfirmCarDets" Visibility="Collapsed">
+            <TextBlock Style="{StaticResource tbkHeadings}"
+                       Text="Are these details correct?"
+                       Width="300"/>
+            <Border Width="320" Height="200" BorderThickness="2"
+                    BorderBrush="Gray" CornerRadius="4">
+            <TextBlock Name="tbkDisplayDets" Width="320"
+                       Height="200"/>
+            </Border>
+            <StackPanel Orientation="Horizontal" Margin="0,20">
+                <Button Name="btnInputCarDetsMnly" HorizontalAlignment="Left"
+               Content="No, Input Details Manually"
+               Background="Red" Margin="20,0,10,0"/>
+            <Button Name="btnConfirmDets" Style="{StaticResource btnNext}"
+                    Margin="0,0,0,0" Content="Yes"
+                    VerticalContentAlignment="Center"/>
+            
+            </StackPanel>
             </StackPanel>
         </StackPanel>
 

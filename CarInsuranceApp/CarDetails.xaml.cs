@@ -41,5 +41,10 @@ namespace CarInsuranceApp
             pgbCarDets.Value = 10;
            
         }
+
+        private void btnGetCarDets_Click(object sender, RoutedEventArgs e)
+        {
+            stkConfirmCarDets.Visibility = Visibility.Visible;
+        }
     }
 }

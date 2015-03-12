@@ -13,10 +13,10 @@ namespace CarInsuranceApp.ServiceClass
         public string Text { get; set; }
         public bool Complete { get; set; }
     }
-    public class Location
+    public class Counties
     {
-        public int Id { get; set; }
-        public string County { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
         public int Premium { get; set; }
     }
     

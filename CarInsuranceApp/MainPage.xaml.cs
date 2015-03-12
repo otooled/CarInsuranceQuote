@@ -1,4 +1,5 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
+﻿using CarInsuranceApp.ServiceClass;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,8 +24,8 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private MobileServiceCollection<ServiceClass.Location> counties;
-        private IMobileServiceTable<ServiceClass.Location> counties_table = App.MobileService.GetTable<ServiceClass.Location>();
+        private MobileServiceCollection<ServiceClass.Counties> counties;
+        private IMobileServiceTable<ServiceClass.Counties> counties_table = App.MobileService.GetTable<ServiceClass.Counties>();
 
 
         public MainPage()
@@ -53,15 +54,20 @@ namespace CarInsuranceApp
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            List<Counties> cties = new List<Counties>();
 
-            //var x = await counties_table.ToCollectionAsync();
-            //foreach (var items in x)
-            //{
-            //    tbxTest.Text = x.ToString();
-
-            //}
-
-           
+            var x = await counties_table.ToCollectionAsync();
+            var c = x.ToList();
+            foreach (var items in x)
+            {
+                cties.Add(items);
+                
+            }
+            cmbVehicleLoc.DataContext = cties;
+          //  cmbCoverType.DataContext = cties;
+            //Counties a = new Counties { Name = "Galway", Premium = 2 };
+          // await counties_table.InsertAsync(a);
+          
             
             //tbxTest.Text = "hello";
         }

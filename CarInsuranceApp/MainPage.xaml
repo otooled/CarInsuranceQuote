@@ -67,7 +67,8 @@
                 <TextBlock Text="Vehicle location" Style="{StaticResource tbkHeadings}" 
                            Margin="0,10,0,0"/>
             </Border>
-            <ComboBox Name="cmbVehicleLoc" Style="{StaticResource cmbDropdowns}">
+            <ComboBox Name="cmbVehicleLoc" Style="{StaticResource cmbDropdowns}"
+                ItemsSource="{Binding}" DisplayMemberPath="Name" >
                 
                       </ComboBox>
             

@@ -124,17 +124,19 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "CarInsuranceApp.CarDetails";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "CarInsuranceApp.MainPage";
+            _typeNameTable[3] = "CarInsuranceApp.DriverExpierence";
+            _typeNameTable[4] = "CarInsuranceApp.MainPage";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::CarInsuranceApp.CarDetails);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::CarInsuranceApp.MainPage);
+            _typeTable[3] = typeof(global::CarInsuranceApp.DriverExpierence);
+            _typeTable[4] = typeof(global::CarInsuranceApp.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -170,7 +172,8 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
         }
 
         private object Activate_0_CarDetails() { return new global::CarInsuranceApp.CarDetails(); }
-        private object Activate_3_MainPage() { return new global::CarInsuranceApp.MainPage(); }
+        private object Activate_3_DriverExpierence() { return new global::CarInsuranceApp.DriverExpierence(); }
+        private object Activate_4_MainPage() { return new global::CarInsuranceApp.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -197,9 +200,16 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
                 xamlType = new global::CarInsuranceApp.CarInsuranceApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  CarInsuranceApp.MainPage
+            case 3:   //  CarInsuranceApp.DriverExpierence
                 userType = new global::CarInsuranceApp.CarInsuranceApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_DriverExpierence;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  CarInsuranceApp.MainPage
+                userType = new global::CarInsuranceApp.CarInsuranceApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

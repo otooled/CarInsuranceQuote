@@ -69,7 +69,7 @@ namespace CarInsuranceApp
           // await counties_table.InsertAsync(a);
           
             
-            //tbxTest.Text = "hello";
+           
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

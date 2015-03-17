@@ -20,9 +20,9 @@ namespace CarInsuranceApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DriverExpierence : Page
+    public sealed partial class ConfirmDvrDets : Page
     {
-        public DriverExpierence()
+        public ConfirmDvrDets()
         {
             this.InitializeComponent();
         }
@@ -36,14 +36,19 @@ namespace CarInsuranceApp
         {
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            pgbDriverExpierence.Value = 20;
-        }
-
-        private void btnNext_Click(object sender, RoutedEventArgs e)
+        private void btnConDvrDetsNo_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(DriverDetails));
+        }
+
+        private void btnConDvrDetsYes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            pgbConDrvDets.Value = 40;
         }
     }
 }

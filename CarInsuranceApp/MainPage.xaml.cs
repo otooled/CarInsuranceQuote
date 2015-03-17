@@ -27,6 +27,9 @@ namespace CarInsuranceApp
         private MobileServiceCollection<ServiceClass.Counties> counties;
         private IMobileServiceTable<ServiceClass.Counties> counties_table = App.MobileService.GetTable<ServiceClass.Counties>();
 
+        private MobileServiceCollection<ServiceClass.CoverType> covTyp;
+        private IMobileServiceTable<ServiceClass.CoverType> covTyp_table = App.MobileService.GetTable<ServiceClass.CoverType>();
+
 
         public MainPage()
         {
@@ -64,7 +67,17 @@ namespace CarInsuranceApp
                 
             }
             cmbVehicleLoc.DataContext = cties;
-          //  cmbCoverType.DataContext = cties;
+
+            //List<CoverType> cvrTyp = new List<CoverType>();
+            //var y = await covTyp_table.ToCollectionAsync();
+            //var ct = y.ToList();
+            //foreach (var i in y)
+            //{
+            //    cvrTyp.Add(i);
+            //}
+
+            //cmbCoverType.DataContext = cvrTyp;
+        
             //Counties a = new Counties { Name = "Galway", Premium = 2 };
           // await counties_table.InsertAsync(a);
           

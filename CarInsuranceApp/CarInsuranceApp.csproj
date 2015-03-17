@@ -85,6 +85,12 @@
     <Compile Include="CarDetails.xaml.cs">
       <DependentUpon>CarDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmDvrDets.xaml.cs">
+      <DependentUpon>ConfirmDvrDets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DriverDetails.xaml.cs">
+      <DependentUpon>DriverDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DriverExpierence.xaml.cs">
       <DependentUpon>DriverExpierence.xaml</DependentUpon>
     </Compile>
@@ -113,6 +119,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="CarDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfirmDvrDets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DriverDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -44,7 +44,7 @@
     <Grid>
         
         <StackPanel>            
-            <ProgressBar Name="pgbCarDets" Width="200" Height="5"
+            <ProgressBar Name="pgbCarDets" Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>
             <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">

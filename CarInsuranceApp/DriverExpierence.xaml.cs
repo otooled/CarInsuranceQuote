@@ -38,7 +38,7 @@ namespace CarInsuranceApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            pgbDriverExpierence.Value = 20;
+            pgbDriverExpierence.Value = 32;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

@@ -38,7 +38,7 @@ namespace CarInsuranceApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            pgbCarDets.Value = 10;
+            pgbCarDets.Value = 16;
            
         }
 

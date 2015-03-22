@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -68,15 +69,17 @@ namespace CarInsuranceApp
             }
             cmbVehicleLoc.DataContext = cties;
 
-            //List<CoverType> cvrTyp = new List<CoverType>();
-            //var y = await covTyp_table.ToCollectionAsync();
-            //var ct = y.ToList();
-            //foreach (var i in y)
-            //{
-            //    cvrTyp.Add(i);
-            //}
+            List<CoverType> cvrTyp = new List<CoverType>();
+            var y = await covTyp_table.ToCollectionAsync();
+            var ct = y.ToList();
+            foreach (var i in y)
+            {
+                cvrTyp.Add(i);
+            }
 
-            //cmbCoverType.DataContext = cvrTyp;
+            cmbCoverType.DataContext = cvrTyp;
+
+            
         
             //Counties a = new Counties { Name = "Galway", Premium = 2 };
           // await counties_table.InsertAsync(a);
@@ -89,5 +92,40 @@ namespace CarInsuranceApp
         {
             Frame.Navigate(typeof(CarDetails));
         }
+
+        //private async void btnTest2_Click(object sender, RoutedEventArgs e)
+        //{
+        //    EmailRecipient sendTo = new EmailRecipient()
+
+        //    {
+
+
+        //        Address = "otoole0david@gmail.com"
+
+        //    };
+        //    //predefine Recipient
+
+
+        //    //generate mail object
+
+        //    EmailMessage mail = new EmailMessage();
+
+        //    mail.Subject = "this is the Subject";
+
+
+        //    mail.Body = "this is the Body";
+
+
+
+        //    //add recipients to the mail object
+
+        //    mail.To.Add(sendTo);
+
+        //    //mail.Bcc.Add(sendTo);
+        //    //mail.CC.Add(sendTo);
+        //    //open the share contract with Mail only:
+
+        //    await EmailManager.ShowComposeNewEmailAsync(mail);
+        //}
     }
 }

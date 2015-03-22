@@ -41,19 +41,23 @@
         </Style>
 
     </Page.Resources>
+    <ScrollViewer>
     <Grid>
         <StackPanel>
             <ProgressBar Name="pgbDriverExpierence"
-                         Width="200" Height="5"
+                         Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>
+            
             <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">
+                
                 <TextBlock Style="{StaticResource tbkPageTitles}" >  
                    <Run Text="Driving Expierience"/>
                     <LineBreak/>
                     <Run Text="Enter your details below"/>
                 </TextBlock>
-            </Border>            
+            </Border>
+            
                 <TextBlock Text="Number of Claims" Style="{StaticResource tbkHeadings}" 
                            Margin="0,30,0,0" Height="40"/>
             
@@ -79,6 +83,9 @@
             <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
                     HorizontalAlignment="Center" Margin="0,20,0,0"
                    Click="btnNext_Click" />
+           
         </StackPanel>
+            
     </Grid>
+    </ScrollViewer>
 </Page>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,6 +23,7 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class DriverDetails : Page
     {
+        
         public DriverDetails()
         {
             this.InitializeComponent();
@@ -38,12 +40,20 @@ namespace CarInsuranceApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            pgbDriverDetails.Value = 30;
+            pgbDriverDetails.Value = 48;
+            
+           
         }
 
         private void btnDDNext_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(ConfirmDvrDets));
+        }
+
+        private  void btnTest_Click(object sender, RoutedEventArgs e)
+        {
+
+            
         }
 
         

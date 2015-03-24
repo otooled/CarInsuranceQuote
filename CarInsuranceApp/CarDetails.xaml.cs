@@ -51,5 +51,14 @@ namespace CarInsuranceApp
         {
             Frame.Navigate(typeof(DriverExpierence));
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        
+
+      
     }
 }

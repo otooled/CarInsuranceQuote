@@ -39,6 +39,13 @@
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
+        <Style x:Key="btnBack" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="#FFA6A6A6"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
 
     </Page.Resources>
     <Grid>
@@ -77,15 +84,23 @@
             <TextBox Name="tbxEmail" Width="180" BorderThickness="1"
                      BorderBrush="Gray" Margin="0,5,0,0"
                         PlaceholderText="Email" />
-            <Button Name="btnTest" Content="test" Background="Red" Click="btnTest_Click"/>
+           
             <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Click Next to Continue" Margin="0,20,0,-10"
                        Width="300" Height="60"/>
-            <Button x:Name="btnDDNext" Style="{StaticResource btnNext}"
+            <StackPanel Orientation="Horizontal"
+                                Margin="20,0">
+
+                <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
+                                Margin="47,0" Click="btnBack_Click"  />
+                <Button x:Name="btnDDNext" Style="{StaticResource btnNext}"
                     Content="Next" Click="btnDDNext_Click"
                     VerticalContentAlignment="Center"
                    
                             HorizontalAlignment="Center"/>
+                
+            </StackPanel>
+            
         </StackPanel>
     </Grid>
 </Page>

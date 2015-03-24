@@ -66,7 +66,7 @@
                       Margin="0,50"/>
             <StackPanel Orientation="Horizontal" Margin="30,0,30,0">
                 <Button Name="btnBack" Content="Back" 
-                        Background="Gray" Margin="50,0,25,0"/>
+                        Background="Gray" Margin="50,0,25,0" Click="btnBack_Click"/>
             <Button Name="btnGetQuote" Content="Get Quote"
                     Height="100" Width="100" Background="Red"
                    Margin="0,0,0,0" Click="btnGetQuote_Click"/>

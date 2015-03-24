@@ -39,7 +39,13 @@
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
-
+        <Style x:Key="btnBack" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="#FFA6A6A6"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
     </Page.Resources>
     <ScrollViewer>
     <Grid>
@@ -73,18 +79,28 @@
             <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Are these details correct?"
                        Width="300"/>
-            <Border Width="320" Height="200" BorderThickness="2"
+            <Border Width="180" Height="150" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
-                <TextBlock Name="tbkDisplayExp" Width="320"
-                       Height="200"/>
+                <TextBlock Name="tbkDisplayExp" Width="180"
+                       Height="150"/>
             </Border>
-            <TextBlock Text="Click Next to Continue" Style="{StaticResource tbkHeadings}" 
-                           Margin="0,0,0,0" Height="40"/>
-            <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
-                    HorizontalAlignment="Center" Margin="0,20,0,0"
+                <TextBlock Style="{StaticResource tbkHeadings}"
+                       Text="Click Next to Continue"
+                       Width="300" Height="60"/>
+                <!--<Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
+                    HorizontalAlignment="Center"
+                   Click="btnNext_Click" />-->
+
+                <StackPanel Orientation="Horizontal"
+                                Margin="20">
+                    <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
+                                Margin="47,0" Click="btnBack_Click" />
+                    <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
+                    HorizontalAlignment="Center"
                    Click="btnNext_Click" />
-           
-        </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
             
     </Grid>
     </ScrollViewer>

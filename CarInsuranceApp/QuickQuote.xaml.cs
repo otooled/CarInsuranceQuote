@@ -46,5 +46,10 @@ namespace CarInsuranceApp
         {
 
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -33,8 +33,15 @@
         </Style>
         <Style x:Key="btnNext" TargetType="Button">
             <Setter Property="Width" Value="100"/>
-            <!--<Setter Property="Height" Value="60"/>-->
+           
             <Setter Property="Background" Value="#FF0E9900"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="btnBack" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="#FFA6A6A6"/>
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -61,12 +68,10 @@
                 <TextBlock Name="tbkDisplayDets" Width="320"
                        Height="200"/>
             </Border>
-            <StackPanel Orientation="Horizontal">
-                <Button Name="btnConDvrDetsNo" 
-                        Width="120" Content="No" Margin="80,20" 
-                        Background="#FF646464" Click="btnConDvrDetsNo_Click"
-                        />
-                <Button Name="btnConDvrDetsYes" Content="Yes" Margin="-70,20" 
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Button Content="No" Style="{StaticResource btnBack}"
+                                Margin="47,0" Click="Button_Click" />
+                <Button Name="btnConDvrDetsYes" Content="Yes" 
                         Style="{StaticResource btnNext}" Click="btnConDvrDetsYes_Click"/>
             </StackPanel>
         </StackPanel>

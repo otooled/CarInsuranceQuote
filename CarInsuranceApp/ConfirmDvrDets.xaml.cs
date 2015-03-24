@@ -50,5 +50,10 @@ namespace CarInsuranceApp
         {
             pgbConDrvDets.Value = 64;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(DriverDetails));
+        }
     }
 }

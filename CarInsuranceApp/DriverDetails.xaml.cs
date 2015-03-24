@@ -50,11 +50,12 @@ namespace CarInsuranceApp
             Frame.Navigate(typeof(ConfirmDvrDets));
         }
 
-        private  void btnTest_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
-            
+            Frame.Navigate(typeof(DriverExpierence));
         }
+
+       
 
         
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarInsuranceApp.ServiceClass;
+using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +24,10 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class VehicleDetails : Page
     {
+        private MobileServiceCollection<ServiceClass.CarMake> carMake;
+        private IMobileServiceTable<ServiceClass.CarMake> cMake_table = App.MobileService.GetTable<ServiceClass.CarMake>();
+
+
         public VehicleDetails()
         {
             this.InitializeComponent();
@@ -36,9 +42,20 @@ namespace CarInsuranceApp
         {
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            pgbCarDets.Value = 16;
+            pgbCarDets.Value = 16;            
+
+            List<CarMake> carM = new List<CarMake>();
+
+            var cMake = await cMake_table.ToCollectionAsync();
+            var c = cMake.ToList();
+            foreach (var items in cMake)
+            {
+                carM.Add(items);
+
+            }
+            cmbCarMake.DataContext = carM;
         }
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)

@@ -26,7 +26,11 @@ namespace CarInsuranceApp.ServiceClass
         public string CoverTypeName { get; set; }
         public int CoverTypeValue { get; set; }
     }
-    
+    public class CarMake
+    {
+        public string Id { get; set; }
+        public string Make { get; set; }
+    }
     //class Car_ins
     //{
 

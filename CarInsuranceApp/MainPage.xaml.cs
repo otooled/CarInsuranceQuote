@@ -60,21 +60,21 @@ namespace CarInsuranceApp
         {
             List<Counties> cties = new List<Counties>();
 
-            var x = await counties_table.ToCollectionAsync();
-            var c = x.ToList();
-            foreach (var items in x)
+            var loc = await counties_table.ToCollectionAsync();
+            var c = loc.ToList();
+            foreach (var items in loc)
             {
                 cties.Add(items);
-                
+                    
             }
             cmbVehicleLoc.DataContext = cties;
 
             List<CoverType> cvrTyp = new List<CoverType>();
-            var y = await covTyp_table.ToCollectionAsync();
-            var ct = y.ToList();
-            foreach (var i in y)
+            var type = await covTyp_table.ToCollectionAsync();
+            var ct = type.ToList();
+            foreach (var items in type)
             {
-                cvrTyp.Add(i);
+                cvrTyp.Add(items);
             }
 
             cmbCoverType.DataContext = cvrTyp;

@@ -88,6 +88,9 @@
     <Compile Include="ConfirmDvrDets.xaml.cs">
       <DependentUpon>ConfirmDvrDets.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactUs.xaml.cs">
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DriverDetails.xaml.cs">
       <DependentUpon>DriverDetails.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,9 @@
       <DependentUpon>QuoteDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServiceClass\Car_ins.cs" />
+    <Compile Include="VehicleDetails.xaml.cs">
+      <DependentUpon>VehicleDetails.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,6 +138,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ContactUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DriverDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QuoteDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

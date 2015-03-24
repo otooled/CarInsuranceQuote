@@ -78,15 +78,15 @@
             <HyperlinkButton Name="hplCarReg" Content="Don't Know Your Car Registration?"
                              Background="White" FontFamily="BatangChe" FontSize="18.667" Foreground="#FF3916D6"
                              HorizontalAlignment="Center"
-                             Margin="0"/>
+                             Margin="0" Click="hplCarReg_Click" />
             <StackPanel Name="stkConfirmCarDets" >
             <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Are these details correct?"
                        Width="300" Height="60"/>
-            <Border Width="320" Height="200" BorderThickness="2"
+            <Border Width="200" Height="150" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
-            <TextBlock Name="tbkDisplayDets" Width="320"
-                       Height="200"/>
+            <TextBlock Name="tbkDisplayDets" Width="200"
+                       Height="150"/>
             </Border>
 
 

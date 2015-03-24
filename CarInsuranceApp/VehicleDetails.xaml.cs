@@ -20,9 +20,9 @@ namespace CarInsuranceApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CarDetails : Page
+    public sealed partial class VehicleDetails : Page
     {
-        public CarDetails()
+        public VehicleDetails()
         {
             this.InitializeComponent();
         }
@@ -39,31 +39,21 @@ namespace CarInsuranceApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             pgbCarDets.Value = 16;
-           
         }
 
-        private void btnGetCarDets_Click(object sender, RoutedEventArgs e)
-        {
-            stkConfirmCarDets.Visibility = Visibility.Visible;
-        }
-
-        private void btnConfirmDets_Click(object sender, RoutedEventArgs e)
+        private void btnVDNext_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(DriverExpierence));
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(CarDetails));
         }
 
-        private void hplCarReg_Click(object sender, RoutedEventArgs e)
+        private void btnNoListing_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(VehicleDetails));
+            Frame.Navigate(typeof(ContactUs));
         }
-
-        
-
-      
     }
 }

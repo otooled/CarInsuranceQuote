@@ -57,11 +57,11 @@
                 <TextBlock Text="Policy Start Date" Style="{StaticResource tbkHeadings}" 
                            Margin="0,30,0,0"/>
             </Border>
-            <DatePicker Name="cdrStartDate" Background="Aqua"
+            <DatePicker Name="cdrStartDate" Foreground="Gray"
                         HorizontalAlignment="Center"/>
-            <CheckBox Name="cbxTerms" Background="Aqua"
+            <CheckBox Name="cbxTerms" Foreground="Gray"
                       Content="Check the box to agree to &#10; Terms and Conditions"
-                      Foreground="BurlyWood"
+                     BorderThickness="1" BorderBrush="Gray"
                       HorizontalAlignment="Center"
                       Margin="0,50"/>
             <StackPanel Orientation="Horizontal" Margin="30,0,30,0">

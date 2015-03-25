@@ -44,12 +44,12 @@ namespace CarInsuranceApp
 
         private void btnGetQuote_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(QuoteDetails));
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ConfirmDvrDets));
         }
     }
 }

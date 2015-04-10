@@ -79,7 +79,7 @@
                            />
                 </Border>
                 <ComboBox Name="cmbEngSize" Style="{StaticResource cmbDropdowns}" ItemsSource="{Binding}"
-                      DisplayMemberPath="CoverTypeName" Foreground="Black"/>
+                     DisplayMemberPath="Engine_Size" Foreground="Black"/>
                 <Border>
                     <TextBlock Text="Year of Manufacture" Style="{StaticResource tbkHeadings}" 
                            />

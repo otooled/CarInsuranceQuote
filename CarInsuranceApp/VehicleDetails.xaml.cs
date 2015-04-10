@@ -27,6 +27,9 @@ namespace CarInsuranceApp
         private MobileServiceCollection<ServiceClass.CarMake> carMake;
         private IMobileServiceTable<ServiceClass.CarMake> cMake_table = App.MobileService.GetTable<ServiceClass.CarMake>();
 
+        private MobileServiceCollection<ServiceClass.EngineSize> enSize;
+        private IMobileServiceTable<ServiceClass.EngineSize> enSize_table = App.MobileService.GetTable<ServiceClass.EngineSize>();
+
 
         public VehicleDetails()
         {
@@ -56,6 +59,15 @@ namespace CarInsuranceApp
 
             }
             cmbCarMake.DataContext = carM;
+
+            List<EngineSize> e_size = new List<EngineSize>();
+            var eSize = await enSize_table.ToCollectionAsync();
+            var es = eSize.ToList();
+            foreach(var items in eSize)
+            {
+                e_size.Add(items);
+            }
+            cmbEngSize.DataContext = e_size;
         }
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)

@@ -31,6 +31,17 @@ namespace CarInsuranceApp.ServiceClass
         public string Id { get; set; }
         public string Make { get; set; }
     }
+    public class CarModel
+    {
+        public string Id { get; set; }
+        public string Model { get; set; }
+    }
+
+    public class EngineSize
+    {
+        public string Id { get; set; }
+        public string Engine_Size { get; set; }
+    }
     //class Car_ins
     //{
 

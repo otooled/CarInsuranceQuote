@@ -30,6 +30,10 @@ namespace CarInsuranceApp
         private MobileServiceCollection<ServiceClass.EngineSize> enSize;
         private IMobileServiceTable<ServiceClass.EngineSize> enSize_table = App.MobileService.GetTable<ServiceClass.EngineSize>();
 
+        private MobileServiceCollection<ServiceClass.ManufactureYear> manYear;
+        private IMobileServiceTable<ServiceClass.ManufactureYear> year_table = App.MobileService.GetTable<ServiceClass.ManufactureYear>();
+
+
 
         public VehicleDetails()
         {
@@ -68,6 +72,15 @@ namespace CarInsuranceApp
                 e_size.Add(items);
             }
             cmbEngSize.DataContext = e_size;
+
+            List<ManufactureYear> man_year = new List<ManufactureYear>();
+            var year = await year_table.ToCollectionAsync();
+            var m_y = year.ToList();
+            foreach(var items in year)
+            {
+                man_year.Add(items);
+            }
+            cmbYear.DataContext = man_year;
         }
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)
@@ -84,5 +97,7 @@ namespace CarInsuranceApp
         {
             Frame.Navigate(typeof(ContactUs));
         }
+
+       
     }
 }

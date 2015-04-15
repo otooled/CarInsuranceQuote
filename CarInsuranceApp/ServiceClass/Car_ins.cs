@@ -42,8 +42,40 @@ namespace CarInsuranceApp.ServiceClass
         public string Id { get; set; }
         public string Engine_Size { get; set; }
     }
-    //class Car_ins
-    //{
 
-    //}
+    public class ModelFord
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class ModelMerc
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+    }
+    
+    public class ModelToyota
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class ManufactureYear
+    {
+        public string Id { get; set; }
+        public string Year { get; set; }
+    }
+
+    public class NoOfClaims
+    {
+        public string Id { get; set; }
+        public string Claims_Num { get; set; }
+    }
+
+    public class PenPoints
+    {
+        public string Id { get; set; }
+        public string PenPointsNum { get; set; }
+    }
 }

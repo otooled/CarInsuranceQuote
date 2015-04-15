@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarInsuranceApp.ServiceClass;
+using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +24,15 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class DriverExpierence : Page
     {
+        //private MobileServiceCollection<ServiceClass.Counties> counties;
+        //private IMobileServiceTable<ServiceClass.Counties> counties_table = App.MobileService.GetTable<ServiceClass.Counties>();
+        private MobileServiceCollection<ServiceClass.NoOfClaims> claims;
+        private IMobileServiceTable<ServiceClass.NoOfClaims> clm_table = App.MobileService.GetTable<ServiceClass.NoOfClaims>();
+
+        private MobileServiceCollection<ServiceClass.PenPoints> points;
+        private IMobileServiceTable<ServiceClass.PenPoints> pnts_table = App.MobileService.GetTable<ServiceClass.PenPoints>();
+        //private IMobileServiceTable<ServiceClass.NoOfClaims> claims_table = App.MobileService.GetTable<ServiceClass.NoOfClaims>();
+
         public DriverExpierence()
         {
             this.InitializeComponent();
@@ -36,9 +47,31 @@ namespace CarInsuranceApp
         {
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             pgbDriverExpierence.Value = 32;
+
+            List<NoOfClaims> num_claims = new List<NoOfClaims>();
+
+            var no_claims = await clm_table.ToCollectionAsync();
+            var noc = no_claims.ToList();
+            foreach (var items in no_claims)
+            {
+                num_claims.Add(items);
+            }
+
+            cmbNoOfClaims.DataContext = num_claims;
+
+            List<PenPoints> pn_pnts = new List<PenPoints>();
+
+            var pp = await pnts_table.ToCollectionAsync();
+            var pnPnts = pp.ToList();
+
+            foreach(var items in pp)
+            {
+                pn_pnts.Add(items);
+            }
+
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

@@ -76,6 +76,11 @@ namespace CarInsuranceApp.ServiceClass
     public class PenPoints
     {
         public string Id { get; set; }
-        public string PenPointsNum { get; set; }
+        public int PenPointsNum { get; set; }
+    }
+    public class LicenceType
+    {
+        public string Id { get; set; }
+        public string License { get; set; }
     }
 }

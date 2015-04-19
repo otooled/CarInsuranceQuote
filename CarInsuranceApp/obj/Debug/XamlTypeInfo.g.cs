@@ -609,3 +609,4 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
 }
 
 
+

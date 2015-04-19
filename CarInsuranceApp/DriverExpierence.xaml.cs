@@ -24,14 +24,16 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class DriverExpierence : Page
     {
-        //private MobileServiceCollection<ServiceClass.Counties> counties;
-        //private IMobileServiceTable<ServiceClass.Counties> counties_table = App.MobileService.GetTable<ServiceClass.Counties>();
+       
         private MobileServiceCollection<ServiceClass.NoOfClaims> claims;
         private IMobileServiceTable<ServiceClass.NoOfClaims> clm_table = App.MobileService.GetTable<ServiceClass.NoOfClaims>();
 
         private MobileServiceCollection<ServiceClass.PenPoints> points;
         private IMobileServiceTable<ServiceClass.PenPoints> pnts_table = App.MobileService.GetTable<ServiceClass.PenPoints>();
-        //private IMobileServiceTable<ServiceClass.NoOfClaims> claims_table = App.MobileService.GetTable<ServiceClass.NoOfClaims>();
+
+        private MobileServiceCollection<ServiceClass.LicenceType> license;
+        private IMobileServiceTable<ServiceClass.LicenceType> License_table = App.MobileService.GetTable<ServiceClass.LicenceType>();
+        
 
         public DriverExpierence()
         {
@@ -71,6 +73,20 @@ namespace CarInsuranceApp
             {
                 pn_pnts.Add(items);
             }
+            cmbNoOfPenalty.DataContext = pn_pnts;
+
+
+            //List<LicenceType> lt = new List<LicenceType>(); 
+
+            //var l_t = await License_table.ToCollectionAsync();
+            //var lnc_ty = l_t.ToList();
+
+            //foreach (var items in l_t)
+            //{
+            //    lt.Add(items);
+            //}
+            //cmbLicence.DataContext = lt;
+                 
 
         }
 

@@ -31,6 +31,8 @@ namespace CarInsuranceApp
         private MobileServiceCollection<ServiceClass.PenPoints> points;
         private IMobileServiceTable<ServiceClass.PenPoints> pnts_table = App.MobileService.GetTable<ServiceClass.PenPoints>();
 
+        //private MobileServiceCollection<ServiceClass.LicenceType> license;
+        //private IMobileServiceTable<ServiceClass.LicenceType> License_table = App.MobileService.GetTable<ServiceClass.LicenceType>();
         private MobileServiceCollection<ServiceClass.LicenceType> license;
         private IMobileServiceTable<ServiceClass.LicenceType> License_table = App.MobileService.GetTable<ServiceClass.LicenceType>();
         
@@ -64,6 +66,7 @@ namespace CarInsuranceApp
 
             cmbNoOfClaims.DataContext = num_claims;
 
+
             List<PenPoints> pn_pnts = new List<PenPoints>();
 
             var pp = await pnts_table.ToCollectionAsync();
@@ -75,8 +78,19 @@ namespace CarInsuranceApp
             }
             cmbNoOfPenalty.DataContext = pn_pnts;
 
+            //List<LicenceType> lce_ty = new List<LicenceType>();
 
-            //List<LicenceType> lt = new List<LicenceType>(); 
+            //var lt = await License_table.ToCollectionAsync();
+            //var lceTy = lt.ToList();
+
+            //foreach (var items in lt)
+            //{
+            //    lce_ty.Add(items);
+            //}
+
+            //cmbLicence.DataContext = lce_ty;
+
+            //List<LicenceType> lt = new List<LicenceType>();
 
             //var l_t = await License_table.ToCollectionAsync();
             //var lnc_ty = l_t.ToList();

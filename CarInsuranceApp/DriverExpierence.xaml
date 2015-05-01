@@ -70,13 +70,13 @@
             
             <ComboBox Name="cmbNoOfClaims" Style="{StaticResource cmbDropdowns}"
                       ItemsSource="{Binding}"
-                     DisplayMemberPath="Claims_Num"  
+                     DisplayMemberPath="ClaimsNum"  
                       />
                      
             <TextBlock Text="Number of Penalty Points" Style="{StaticResource tbkHeadings}" 
                            Margin="0,0,0,0" Height="40" Width="220"/>
             <ComboBox Name="cmbNoOfPenalty" Style="{StaticResource cmbDropdowns}"
-                      ItemsSource="{Binding}" DisplayMemberPath="PenPointsNum"/>
+                      ItemsSource="{Binding}" DisplayMemberPath="NumOfPoints"/>
             <TextBlock Text="License Type" Style="{StaticResource tbkHeadings}" 
                            Margin="0,0,0,0" Height="40"/>
             <ComboBox Name="cmbLicence" Style="{StaticResource cmbDropdowns}"

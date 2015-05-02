@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class CarDetails : Page
     {
+        private MobileServiceCollection<ServiceClass.ExistingVehicles> vhles;
+        private IMobileServiceTable<ServiceClass.ExistingVehicles> ex_vhlesTable = App.MobileService.GetTable<ServiceClass.ExistingVehicles>();
         public CarDetails()
         {
             this.InitializeComponent();
@@ -44,7 +47,28 @@ namespace CarInsuranceApp
 
         private void btnGetCarDets_Click(object sender, RoutedEventArgs e)
         {
-            stkConfirmCarDets.Visibility = Visibility.Visible;
+            try
+            {
+                var q = vhles.Where(a => a.Reg == tbxCarReg.Text.ToUpper()).FirstOrDefault();
+                if (q.Reg == tbxCarReg.Text)
+                {
+                    tbkMake.Text = q.Make;
+                    tbkModel.Text = q.Model;
+                    tbkEng_size.Text = q.Eng_size.ToString();
+                }
+
+                //var q = ex_vhlesTable.Where(a => a.Reg == tbxCarReg.Text.ToUpper());
+                //    if(q. == tbxCarReg.Text)
+                //        {
+                //            tbkDisplayDets.Text = ;
+                //        }
+            }
+
+                catch(Exception)
+                {
+
+                }
+            //stkConfirmCarDets.Visibility = Visibility.Visible;
         }
 
         private void btnConfirmDets_Click(object sender, RoutedEventArgs e)

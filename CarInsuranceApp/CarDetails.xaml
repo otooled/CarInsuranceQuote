@@ -33,7 +33,7 @@
         </Style>
         <Style x:Key="btnNext" TargetType="Button">
             <Setter Property="Width" Value="100"/>
-             <Setter Property="Background" Value="#FF389329"/>
+            <Setter Property="Background" Value="#FF389329"/>
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -44,69 +44,92 @@
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+
         </Style>
 
     </Page.Resources>
     <ScrollViewer>
-    <Grid>
-        
-        <StackPanel>            
-            <ProgressBar Name="pgbCarDets" Width="200" Height="20"
+        <Grid>
+
+            <StackPanel>
+                <ProgressBar Name="pgbCarDets" Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>
-            <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
+                <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">
-                <TextBlock Style="{StaticResource tbkPageTitles}" >  
+                    <TextBlock Style="{StaticResource tbkPageTitles}" >  
                    <Run Text="Car Details"/>
                     <LineBreak/>
                     <Run Text="Enter your car registration below"/>
-                </TextBlock>
-            </Border>
-            <StackPanel Orientation="Horizontal" Margin="20,50,0,20">
-            <TextBox Name="tbxCarReg" Width="180" Height="40"
+                    </TextBlock>
+                </Border>
+                <StackPanel Orientation="Horizontal" Margin="20,50,0,20">
+                    <TextBox Name="tbxCarReg" Width="180" Height="40"
                      HorizontalAlignment="Left" BorderThickness="2"
                      BorderBrush="Gray" Margin="3,10,0,0" 
                      PlaceholderText="Car Registration" FontFamily="BatangChe"/>
 
-            <Button Name="btnGetCarDets" Content="Get Car Details"
+                    <Button Name="btnGetCarDets" Content="Get Car Details"
                     Background="Red" Margin="10,-2,0,0"
                     HorizontalAlignment="Right" Width="165" 
                     Height="65" Click="btnGetCarDets_Click" FontFamily="BatangChe"
-                    /> 
-                
-            </StackPanel>
+                    />
 
-            <HyperlinkButton Name="hplCarReg" Content="Don't Know Your Car Registration?"
+                </StackPanel>
+
+                <HyperlinkButton Name="hplCarReg" Content="Don't Know Your Car Registration?"
                              Background="White" FontFamily="BatangChe" FontSize="18.667" Foreground="#FF3916D6"
                              HorizontalAlignment="Center"
                              Margin="0" Click="hplCarReg_Click" />
-            <StackPanel Name="stkConfirmCarDets" >
-            <TextBlock Style="{StaticResource tbkHeadings}"
+                <StackPanel Name="stkConfirmCarDets" >
+                    <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Are these details correct?"
                        Width="300" Height="60"/>
-            <Border Width="200" Height="150" BorderThickness="2"
+
+                    <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
-            <TextBlock Name="tbkDisplayDets" Width="200"
-                       Height="150"/>
-            </Border>
+                        <TextBlock Name="tbkMake" Width="200"
+                       Height="50"/>
+                    </Border>
+                    <Border Width="200" Height="50" BorderThickness="2"
+                    BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock Name="tbkModel" Width="200"
+                       Height="50"/>
+                    </Border>
+                    <Border Width="200" Height="50" BorderThickness="2"
+                    BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock Name="tbkEng_size" Width="200"
+                       Height="50"/>
+                    </Border>
 
 
                     <TextBlock Style="{StaticResource tbkHeadings}"
                                    Text="Click Yes to continue"/>
                     <StackPanel Orientation="Horizontal"
-                                Margin="20,0">                      
+                                Margin="20,0">
                        
-                        <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
-                                Margin="47,0" Click="btnBack_Click" />
-                <Button x:Name="btnConfirmDets" Style="{StaticResource btnNext}"
-                    Content="Yes"
+                        <Button Name="btnBack" 
+                                Margin="47,0" Click="btnBack_Click" >
+
+                            <Image Height="50" Width="50" Source="Images\back-button.png" 
+                        />
+                        </Button>
+                       
+
+
+                        
+                        <Button x:Name="btnConfirmDets" Style="{StaticResource btnNext}"
                     VerticalContentAlignment="Center"
-                    Click="btnConfirmDets_Click"
-                            HorizontalAlignment="Center"/>
+                    Click="btnConfirmDets_Click" Content="Yes"
+                            HorizontalAlignment="Center">
+                                                      
+                        </Button>
                     </StackPanel>
 
-                </StackPanel>
-        </StackPanel>
 
-    </Grid>
+                </StackPanel>
+               
+            </StackPanel>
+
+        </Grid>
     </ScrollViewer>
 </Page>

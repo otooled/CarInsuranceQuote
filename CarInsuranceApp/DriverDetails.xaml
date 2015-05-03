@@ -67,7 +67,8 @@
            
             <TextBox Name="tbxFname" Width="180" BorderThickness="1"
                      BorderBrush="Gray" Margin="14,5"
-                     PlaceholderText="First Name"/>
+                     PlaceholderText="First Name"
+                     Foreground="Black"/>
 
                 <TextBox Name="tbxSname" Width="180" BorderThickness="1"
                      BorderBrush="Gray" Margin="0,5,0,0"

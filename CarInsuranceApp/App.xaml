@@ -9,6 +9,11 @@
             
             <Grid/>
         </ControlTemplate>
+        <Style x:Key="backImage" TargetType="Image">
+            <Setter Property="Opacity" Value="100"/>
+            
+        </Style>
+        
     </Application.Resources>
 
 </Application>

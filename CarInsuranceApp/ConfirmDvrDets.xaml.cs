@@ -34,11 +34,26 @@ namespace CarInsuranceApp
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            var nav = (DriverDetailsNav)e.Parameter;
+            tbkFname.Text = nav.fName;
+            tbkSname.Text = nav.sName;
+            tbkEmail.Text = nav.email;
+            tbxAge.Text = nav.age.ToString();
         }
 
         private void btnConDvrDetsNo_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DriverDetails));
+            DriverDetailsNav nav = new DriverDetailsNav()
+            {
+                fName = tbkFname.Text,
+                sName = tbkSname.Text,
+                email = tbkEmail.Text,
+                age = Convert.ToInt16(tbxAge.Text)
+            };
+
+            //Frame.Navigate(typeof(ConfirmDvrDets), nav);
+            Frame.Navigate(typeof(DriverDetails), nav);
+            //Frame.GoBack(typeof(DriverDetails), nav.fName);
         }
 
         private void btnConDvrDetsYes_Click(object sender, RoutedEventArgs e)
@@ -53,7 +68,8 @@ namespace CarInsuranceApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DriverDetails));
+            Frame.GoBack();
+            //Frame.Navigate(typeof(DriverDetails));
         }
     }
 }

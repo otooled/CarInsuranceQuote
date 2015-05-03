@@ -101,6 +101,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MobileServiceCollection.cs" />
+    <Compile Include="DriverDetailsNav.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickQuote.xaml.cs">
       <DependentUpon>QuickQuote.xaml</DependentUpon>

@@ -88,7 +88,7 @@
                     <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
                         <TextBlock Name="tbkMake" Width="200"
-                       Height="50"/>
+                       Height="50" Foreground="Black"/>
                     </Border>
                     <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
@@ -109,13 +109,12 @@
                        
                         <Button Name="btnBack" 
                                 Margin="47,0" Click="btnBack_Click" >
-
-                            <Image Height="50" Width="50" Source="Images\back-button.png" 
+                            <StackPanel Background="Beige">
+                            <Image Height="50" Width="100" Source="Images\back-button.png" Style="{StaticResource backImage}"
+                                 
                         />
+                            </StackPanel>
                         </Button>
-                       
-
-
                         
                         <Button x:Name="btnConfirmDets" Style="{StaticResource btnNext}"
                     VerticalContentAlignment="Center"

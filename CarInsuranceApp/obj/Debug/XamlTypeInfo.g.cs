@@ -124,7 +124,7 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[12];
             _typeNameTable[0] = "CarInsuranceApp.CarDetails";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -135,9 +135,10 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
             _typeNameTable[7] = "CarInsuranceApp.MainPage";
             _typeNameTable[8] = "CarInsuranceApp.QuickQuote";
             _typeNameTable[9] = "CarInsuranceApp.QuoteDetails";
-            _typeNameTable[10] = "CarInsuranceApp.VehicleDetails";
+            _typeNameTable[10] = "CarInsuranceApp.RetrieveQuote";
+            _typeNameTable[11] = "CarInsuranceApp.VehicleDetails";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[12];
             _typeTable[0] = typeof(global::CarInsuranceApp.CarDetails);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -148,7 +149,8 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
             _typeTable[7] = typeof(global::CarInsuranceApp.MainPage);
             _typeTable[8] = typeof(global::CarInsuranceApp.QuickQuote);
             _typeTable[9] = typeof(global::CarInsuranceApp.QuoteDetails);
-            _typeTable[10] = typeof(global::CarInsuranceApp.VehicleDetails);
+            _typeTable[10] = typeof(global::CarInsuranceApp.RetrieveQuote);
+            _typeTable[11] = typeof(global::CarInsuranceApp.VehicleDetails);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -191,7 +193,8 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
         private object Activate_7_MainPage() { return new global::CarInsuranceApp.MainPage(); }
         private object Activate_8_QuickQuote() { return new global::CarInsuranceApp.QuickQuote(); }
         private object Activate_9_QuoteDetails() { return new global::CarInsuranceApp.QuoteDetails(); }
-        private object Activate_10_VehicleDetails() { return new global::CarInsuranceApp.VehicleDetails(); }
+        private object Activate_10_RetrieveQuote() { return new global::CarInsuranceApp.RetrieveQuote(); }
+        private object Activate_11_VehicleDetails() { return new global::CarInsuranceApp.VehicleDetails(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -267,9 +270,16 @@ namespace CarInsuranceApp.CarInsuranceApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  CarInsuranceApp.VehicleDetails
+            case 10:   //  CarInsuranceApp.RetrieveQuote
                 userType = new global::CarInsuranceApp.CarInsuranceApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_VehicleDetails;
+                userType.Activator = Activate_10_RetrieveQuote;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  CarInsuranceApp.VehicleDetails
+                userType = new global::CarInsuranceApp.CarInsuranceApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_VehicleDetails;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

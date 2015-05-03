@@ -90,5 +90,6 @@ namespace CarInsuranceApp.ServiceClass
         public string Make { get; set; }
         public string Model { get; set; }
         public double Eng_size { get; set; }
+        public int Year { get; set; }
     }
 }

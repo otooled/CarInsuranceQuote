@@ -100,6 +100,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainPageNav.cs" />
     <Compile Include="MobileServiceCollection.cs" />
     <Compile Include="DriverDetailsNav.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,7 +110,11 @@
     <Compile Include="QuoteDetails.xaml.cs">
       <DependentUpon>QuoteDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RetrieveQuote.xaml.cs">
+      <DependentUpon>RetrieveQuote.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ServiceClass\Car_ins.cs" />
+    <Compile Include="VehDetsNav.cs" />
     <Compile Include="VehicleDetails.xaml.cs">
       <DependentUpon>VehicleDetails.xaml</DependentUpon>
     </Compile>
@@ -164,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QuoteDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RetrieveQuote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

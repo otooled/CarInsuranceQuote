@@ -63,13 +63,7 @@ namespace CarInsuranceApp
 
         private void btnDDNext_Click(object sender, RoutedEventArgs e)
         {
-            DriverDetailsNav nav = new DriverDetailsNav()
-            {
-                fName = tbxFname.Text,
-                sName = tbxSname.Text,
-                age = Convert.ToInt16(tbxAge.Text),
-                email = tbxEmail.Text
-            };
+           
 
             if(string.IsNullOrWhiteSpace(tbxFname.Text))
             {
@@ -90,12 +84,28 @@ namespace CarInsuranceApp
                 msg.ShowAsync();
                 return;
             }
+
+            if (string.IsNullOrWhiteSpace(tbxAge.Text))
+            {
+                MessageDialog msg = new MessageDialog("Age must be entered");
+                msg.ShowAsync();
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(tbxEmail.Text))
             {
                 MessageDialog msg = new MessageDialog("Email must be entered");
                 msg.ShowAsync();
                 return;
             }
+            DriverDetailsNav nav = new DriverDetailsNav()
+            {
+                fName = tbxFname.Text,
+                sName = tbxSname.Text,
+                age = Convert.ToInt16(tbxAge.Text),
+                email = tbxEmail.Text
+            };
+            
             Frame.Navigate(typeof(ConfirmDvrDets), nav);
         }
 

@@ -20,9 +20,9 @@ namespace CarInsuranceApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class QuoteDetails : Page
+    public sealed partial class RetrieveQuote : Page
     {
-        public QuoteDetails()
+        public RetrieveQuote()
         {
             this.InitializeComponent();
         }
@@ -38,12 +38,7 @@ namespace CarInsuranceApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            pgbQuoteDetails.Value = 100;
-        }
 
-        private void btnFinish_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -80,53 +80,66 @@
                              Background="White" FontFamily="BatangChe" FontSize="18.667" Foreground="#FF3916D6"
                              HorizontalAlignment="Center"
                              Margin="0" Click="hplCarReg_Click" />
-                <StackPanel Name="stkConfirmCarDets" >
+                <StackPanel x:Name="stkConfirmCarDets" >
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                       Text="Are these details correct?"
-                       Width="300" Height="60"/>
-
+                		Text="Are these details correct?"
+                		Width="300" Height="60"/>
+                    <TextBlock Style="{StaticResource tbkHeadings}"
+                		Text="Make"
+                		Width="100" Height="50"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                    BorderBrush="Gray" CornerRadius="4">
-                        <TextBlock Name="tbkMake" Width="200"
-                       Height="50" Foreground="Black"/>
+                		BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock x:Name="tbkMake" Width="200"
+                			Height="50" Foreground="Black"/>
                     </Border>
+                    <TextBlock Style="{StaticResource tbkHeadings}"
+                		Text="Model"
+                		Width="100" Height="50"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                    BorderBrush="Gray" CornerRadius="4">
-                        <TextBlock Name="tbkModel" Width="200"
-                       Height="50"/>
+                		BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock x:Name="tbkModel" Width="200"
+                			Height="50"/>
                     </Border>
+                    <TextBlock Style="{StaticResource tbkHeadings}"
+                		Text="Engine"
+                		Width="100" Height="50"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                    BorderBrush="Gray" CornerRadius="4">
-                        <TextBlock Name="tbkEng_size" Width="200"
-                       Height="50"/>
+                		BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock x:Name="tbkEng_size" Width="200"
+                			Height="50"/>
                     </Border>
-
+                    <TextBlock Style="{StaticResource tbkHeadings}"
+                		Text="Year"
+                		Width="100" Height="50"/>
+                    <Border Width="200" Height="50" BorderThickness="2"
+                		BorderBrush="Gray" CornerRadius="4">
+                        <TextBlock x:Name="tbkYear" Width="200"
+                			Height="50"/>
+                    </Border>
 
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                                   Text="Click Yes to continue"/>
+                		Text="Click Yes to continue"/>
                     <StackPanel Orientation="Horizontal"
-                                Margin="20,0">
-                       
-                        <Button Name="btnBack" 
-                                Margin="47,0" Click="btnBack_Click" >
+                		Margin="20,0">
+
+                        <Button x:Name="btnBack" 
+                			Margin="47,0" Click="btnBack_Click" >
                             <StackPanel Background="Beige">
-                            <Image Height="50" Width="100" Source="Images\back-button.png" Style="{StaticResource backImage}"
+                                <Image Height="50" Width="100" Source="Images\back-button.png" Style="{StaticResource backImage}"
                                  
                         />
                             </StackPanel>
                         </Button>
-                        
+
                         <Button x:Name="btnConfirmDets" Style="{StaticResource btnNext}"
-                    VerticalContentAlignment="Center"
-                    Click="btnConfirmDets_Click" Content="Yes"
-                            HorizontalAlignment="Center">
-                                                      
-                        </Button>
+                			VerticalContentAlignment="Center"
+                			Click="btnConfirmDets_Click" Content="Yes"
+                			HorizontalAlignment="Center"/>
                     </StackPanel>
 
 
                 </StackPanel>
-               
+
             </StackPanel>
 
         </Grid>

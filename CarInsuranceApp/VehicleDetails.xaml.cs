@@ -85,7 +85,12 @@ namespace CarInsuranceApp
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DriverExpierence));
+            VehDetsNav nav = new VehDetsNav()
+            {
+                Make = cmbCarMake.SelectedItem.ToString()
+            };
+
+            Frame.Navigate(typeof(CarDetails));
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

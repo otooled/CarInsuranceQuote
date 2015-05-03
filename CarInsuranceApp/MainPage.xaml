@@ -8,14 +8,14 @@
     mc:Ignorable="d"
    Background="#FFFDFDFD" Loaded="Page_Loaded">
     <Page.Resources>
-        <Style x:Key="tbkPageTitles" TargetType="TextBlock">            
+        <Style x:Key="tbkPageTitles" TargetType="TextBlock">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Width" Value="250"/>
-            <Setter Property="Height" Value="60"/> 
+            <Setter Property="Height" Value="60"/>
             <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="10"/>  
+            <Setter Property="Padding" Value="10"/>
             <Setter Property="FontSize" Value="16"
-/> 
+/>
         </Style>
         <Style x:Key="tbkHeadings" TargetType="TextBlock">
             <Setter Property="Foreground" Value="Black"/>
@@ -29,21 +29,21 @@
         <Style x:Key="cmbDropdowns" TargetType="ComboBox">
             <Setter Property="Width" Value="250"/>
             <Setter Property="BorderBrush" Value="#FF424141"/>
-            <Setter Property="BorderThickness" Value="1"/>            
+            <Setter Property="BorderThickness" Value="1"/>
         </Style>
         <Style x:Key="btnNext" TargetType="Button">
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="#FF389329"/>
+            <Setter Property="Background" Value="#39B7CD"/>
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
 
-    </Page.Resources>    
+    </Page.Resources>
 
     <Grid>
-    	<!--<Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
     		<ColumnDefinition/>
     		<ColumnDefinition Width="15*"/>
     	</Grid.ColumnDefinitions>-->
@@ -65,7 +65,7 @@
                 <TextBlock Text="Insurance cover type" Style="{StaticResource tbkHeadings}" 
                            Margin="0,30,0,0"/>
             </Border>
-            
+
             <ComboBox Name="cmbCoverType" Style="{StaticResource cmbDropdowns}" ItemsSource="{Binding}"
                       DisplayMemberPath="CoverTypeName" Foreground="Black"/>
             <Border>
@@ -74,17 +74,30 @@
             </Border>
             <ComboBox Name="cmbVehicleLoc" Style="{StaticResource cmbDropdowns}"
                 ItemsSource="{Binding}" DisplayMemberPath="Name" Foreground="Black" >
-                
-                      </ComboBox>
-            
-            <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
+
+            </ComboBox>
+
+            <!--<Button Name="btnNext" Style="{StaticResource btnNext}"
                     HorizontalAlignment="Center" Margin="0,20,0,0"
-                    Click="btnNext_Click"/>
+                    Click="btnNext_Click">
+                <Button Content="Next"/>
+            </Button>-->
+            <Button Name="btnNext" Style="{StaticResource btnNext}" Content="Next"
+                    Click="btnNext_Click" HorizontalAlignment="Center">
+               
+            </Button>
+                    
+            
+            <Button Name="btnRetrieve" Content="Retrieve Existing Quote"
+                    Click="btnRetrieve_Click" HorizontalAlignment="Center"
+                    Background="#FF3F59FF">
+                
+            </Button>
             <!--<Button Name="btnTest2" Content="test" Background="Blue"
                     Click="btnTest2_Click"/>
             <TextBox Name="tbxEmail2" BorderThickness="2"/>-->
         </StackPanel>
-       
-        
+
+
     </Grid>
 </Page>

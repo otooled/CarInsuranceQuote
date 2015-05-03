@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace CarInsuranceApp
@@ -37,6 +38,15 @@ namespace CarInsuranceApp
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            try
+            {
+                var nav = (VehDetsNav)e.Parameter;
+                tbkMake.Text = nav.Make;
+            }
+            catch
+            {
+
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -55,6 +65,7 @@ namespace CarInsuranceApp
                     tbkMake.Text = q.Make;
                     tbkModel.Text = q.Model;
                     tbkEng_size.Text = q.Eng_size.ToString();
+                  
                 }
 
                 //var q = ex_vhlesTable.Where(a => a.Reg == tbxCarReg.Text.ToUpper());

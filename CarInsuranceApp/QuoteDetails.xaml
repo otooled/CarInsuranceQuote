@@ -81,7 +81,10 @@
                 <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Green" CornerRadius="4">
                     <TextBlock Name="tbkDisplayQuote" Width="200"
-                       Height="50" TextAlignment="Center"/>
+                       Height="50" TextAlignment="Center"
+                               Foreground="Green"
+                               FontSize="20"
+                               FontFamily="BatangChe"/>
                 </Border>
                 <Border>
                     <TextBlock Text="Your Reference Quote" Style="{StaticResource tbkHeadings}" 

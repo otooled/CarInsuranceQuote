@@ -40,11 +40,19 @@ namespace CarInsuranceApp
         {
             pgbQuickQuote.Value = 80;
 
+            
+            Calculation clc = new Calculation()
+            {
+                county = GlobalVariables.countyRating
+            };
+
         }
 
         private void btnGetQuote_Click(object sender, RoutedEventArgs e)
         {
             var qref = Guid.NewGuid().ToString("N").Substring(0, 6).ToUpper();
+            
+
             QuoteNav nav = new QuoteNav()
             {
                 q_ref = qref

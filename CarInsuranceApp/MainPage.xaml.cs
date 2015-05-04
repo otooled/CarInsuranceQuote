@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace CarInsuranceApp
 {
+   
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -32,8 +33,8 @@ namespace CarInsuranceApp
 
         private MobileServiceCollection<ServiceClass.CoverType> covTyp;
         private IMobileServiceTable<ServiceClass.CoverType> covTyp_table = App.MobileService.GetTable<ServiceClass.CoverType>();
-
-
+        
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -90,34 +91,11 @@ namespace CarInsuranceApp
            
         }
 
-        //private void btnNext_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if(cmbCoverType.SelectedValue == null)
-        //    {
-        //        MessageDialog msg = new MessageDialog("Cover type must be selected");
-        //        msg.ShowAsync();
-        //        return;
-        //    }
-
-        //    if(cmbVehicleLoc.SelectedValue == null)
-        //    {
-        //        MessageDialog msg = new MessageDialog("A location must be selected");
-        //        msg.ShowAsync();
-        //        return;
-        //    }
-
-        //    MainPageNav nav = new MainPageNav()
-        //    {
-        //        coverType = cmbCoverType.SelectedValue.ToString(),
-        //        location = cmbVehicleLoc.SelectedValue.ToString()
-
-        //    };
-        //    Frame.Navigate(typeof(CarDetails));
-        //}
+       
 
         private void btnRetrieve_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(RetrieveQuote));
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
@@ -136,14 +114,23 @@ namespace CarInsuranceApp
                 return;
             }
 
-            MainPageNav nav = new MainPageNav()
-            {
-                coverType = cmbCoverType.SelectedValue.ToString(),
-                location = cmbVehicleLoc.SelectedValue.ToString()
+            //MainPageNav nav = new MainPageNav()
+            //{
+            //    coverType = cmbCoverType.SelectedValue.ToString(),
+            //    location = cmbVehicleLoc.SelectedValue.ToString()
 
-            };
-            Frame.Navigate(typeof(CarDetails),nav);
+            //};
+            try
+            {
+                GlobalVariables.countyRating = Convert.ToInt32(cmbVehicleLoc.SelectedValue);
+                //var cr = App.Current as App;
+                //cr.countyRating = Convert.ToInt32(cmbVehicleLoc.SelectedItem);
+            }
+            catch { }
+            Frame.Navigate(typeof(CarDetails));
         }
+
+        
 
         //private async void btnTest2_Click(object sender, RoutedEventArgs e)
         //{

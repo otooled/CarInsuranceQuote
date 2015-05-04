@@ -82,6 +82,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Calculation.cs" />
     <Compile Include="CarDetails.xaml.cs">
       <DependentUpon>CarDetails.xaml</DependentUpon>
     </Compile>
@@ -97,6 +98,7 @@
     <Compile Include="DriverExpierence.xaml.cs">
       <DependentUpon>DriverExpierence.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

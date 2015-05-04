@@ -70,7 +70,7 @@
             
             <ComboBox Name="cmbNoOfClaims" Style="{StaticResource cmbDropdowns}"
                       ItemsSource="{Binding}"
-                     DisplayMemberPath="ClaimsNum"  
+                     DisplayMemberPath="ClaimsNum"   
                       />
                      
             <TextBlock Text="Number of Penalty Points" Style="{StaticResource tbkHeadings}" 

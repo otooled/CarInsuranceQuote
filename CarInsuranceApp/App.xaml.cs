@@ -26,6 +26,7 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class App : Application
     {
+        public int countyRating { get; set; }
         private TransitionCollection transitions;
 //        public static MobileServiceClient MobileService = new MobileServiceClient(
 //          "http://localhost:51538"

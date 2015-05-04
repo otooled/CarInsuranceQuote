@@ -32,9 +32,9 @@
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
         <Style x:Key="btnNext" TargetType="Button">
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="#FF0E9900"/>
+            <Setter Property="Background" Value="#39B7CD"/>
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -46,7 +46,13 @@
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
-
+        <Style x:Key="tbks" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Page.Resources>
     <Grid>
         <StackPanel>
@@ -61,7 +67,46 @@
                     <Run Text="Enter your details below"/>
                 </TextBlock>
             </Border>
-        </StackPanel>
 
+            <TextBlock Style="{StaticResource tbkHeadings}"
+                       Text="Enter your quote reference below"
+                       Width="300" Height="60" Margin="0,60,0,-5"/>
+            <TextBox Name="tbxAge" Width="110" BorderThickness="1"
+                     BorderBrush="Gray" Margin="0,5"
+                     PlaceholderText="Quote Ref"/>
+            <TextBlock Text="Your Name" Style="{StaticResource tbkHeadings}" 
+                           Margin="0,0,0,0" Height="40"/>
+            <StackPanel Orientation="Horizontal">
+                <Border BorderThickness="1"
+                     BorderBrush="Gray" Margin="10,5" CornerRadius="4">
+                    <TextBlock Name="tbkFname" Width="180" 
+                     Height="30" Foreground="Black"
+                           Style="{StaticResource tbks}"/>
+                </Border>
+                <Border BorderThickness="1"
+                     BorderBrush="Gray" Margin="0,5,0,5"
+                        CornerRadius="4">
+                    <TextBlock Name="tbkSname" Width="180" 
+                         Foreground="Black" 
+                           Style="{StaticResource tbks}"/>
+                </Border>
+            </StackPanel>
+            <TextBlock Text="Your Quote" Style="{StaticResource tbkHeadings}" 
+                            Height="40" Width="220"/>
+            <Border BorderThickness="1" Height="30"
+                     BorderBrush="Gray" Width="100" CornerRadius="4">
+                <TextBlock Name="tbkYourQuote" Width="100"  Margin="0,5"
+                    Style="{StaticResource tbks}"/>
+            </Border>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Button Content="Back" Style="{StaticResource btnBack}"
+                                Margin="47,0" Click="Button_Click"/>
+                <Button x:Name="btnContact" Style="{StaticResource btnNext}"
+                			VerticalContentAlignment="Center"
+                			 Content="Contact Us" Click="btnContact_Click"
+                			HorizontalAlignment="Center"/>
+            </StackPanel>
+           
+        </StackPanel>
     </Grid>
 </Page>

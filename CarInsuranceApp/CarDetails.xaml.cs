@@ -38,6 +38,8 @@ namespace CarInsuranceApp
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            
+
             try
             {
                 var nav = (VehDetsNav)e.Parameter;

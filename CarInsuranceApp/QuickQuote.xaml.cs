@@ -44,7 +44,12 @@ namespace CarInsuranceApp
 
         private void btnGetQuote_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(QuoteDetails));
+            var qref = Guid.NewGuid().ToString("N").Substring(0, 6).ToUpper();
+            QuoteNav nav = new QuoteNav()
+            {
+                q_ref = qref
+            };
+            Frame.Navigate(typeof(QuoteDetails), nav);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

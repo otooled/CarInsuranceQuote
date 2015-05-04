@@ -90,7 +90,7 @@ namespace CarInsuranceApp
                 Make = cmbCarMake.SelectedItem.ToString()
             };
 
-            Frame.Navigate(typeof(CarDetails));
+            Frame.Navigate(typeof(CarDetails), nav);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

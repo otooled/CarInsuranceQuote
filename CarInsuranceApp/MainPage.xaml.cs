@@ -122,7 +122,7 @@ namespace CarInsuranceApp
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            if(cmbCoverType.SelectedValue == null)
+            if (cmbCoverType.SelectedValue == null)
             {
                 MessageDialog msg = new MessageDialog("Cover type must be selected");
                 msg.ShowAsync();
@@ -142,7 +142,7 @@ namespace CarInsuranceApp
                 location = cmbVehicleLoc.SelectedValue.ToString()
 
             };
-            Frame.Navigate(typeof(CarDetails));
+            Frame.Navigate(typeof(CarDetails),nav);
         }
 
         //private async void btnTest2_Click(object sender, RoutedEventArgs e)

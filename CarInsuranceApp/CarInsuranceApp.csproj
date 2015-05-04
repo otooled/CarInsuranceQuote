@@ -110,6 +110,7 @@
     <Compile Include="QuoteDetails.xaml.cs">
       <DependentUpon>QuoteDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="QuoteNav.cs" />
     <Compile Include="RetrieveQuote.xaml.cs">
       <DependentUpon>RetrieveQuote.xaml</DependentUpon>
     </Compile>

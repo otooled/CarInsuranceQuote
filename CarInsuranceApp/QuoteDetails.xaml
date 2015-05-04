@@ -90,7 +90,10 @@
                 <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Blue" CornerRadius="4">
                     <TextBlock Name="tbkDisplayQuoteRef" Width="200"
-                       Height="50" TextAlignment="Center"/>
+                       Height="50" TextAlignment="Center"
+                               Foreground="Blue"
+                               FontSize="20"
+                               FontFamily="BatangChe"/>
                 </Border>
 
                 <Button Name="btnFinish" Content="Finish" Background="#FF3F59FF"

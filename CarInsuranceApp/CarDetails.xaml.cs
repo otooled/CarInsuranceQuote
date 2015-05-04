@@ -41,7 +41,7 @@ namespace CarInsuranceApp
             try
             {
                 var nav = (VehDetsNav)e.Parameter;
-                tbkMake.Text = nav.Make;
+                tbkMake.Text = nav.Make.ToString();
             }
             catch
             {

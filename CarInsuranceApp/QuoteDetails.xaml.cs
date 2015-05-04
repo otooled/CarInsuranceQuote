@@ -34,6 +34,8 @@ namespace CarInsuranceApp
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            var nav = (QuoteNav)e.Parameter;
+            tbkDisplayQuoteRef.Text = nav.q_ref;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

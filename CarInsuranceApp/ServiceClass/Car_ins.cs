@@ -92,4 +92,13 @@ namespace CarInsuranceApp.ServiceClass
         public double Eng_size { get; set; }
         public int Year { get; set; }
     }
+
+    public class Quote
+    {
+        public string Id { get; set; }
+        public string q_ref { get; set; }
+        public double q_price { get; set; }
+        public string f_name { get; set; }
+        public string sname { get; set; }
+    }
 }

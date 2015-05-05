@@ -93,7 +93,15 @@
                        Text="Click Next to Continue" Margin="0,20,0,-10"
                        Width="300" Height="60"/>
                 <StackPanel Orientation="Horizontal"
-                                Margin="20,0">
+                             Margin="20" Width="150">
+                    <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
+                          Foreground="Black" Click="btnBack_Click"/>
+
+                    <AppBarButton x:Name="btnNext"
+                                      HorizontalAlignment="Right"
+                                      Foreground="Green" Background="Green"
+                                      Click="btnVDNext_Click" Icon="Accept"/>
+                                <!--Margin="20,0">
 
                     <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
                                 Margin="47,0" Click="btnBack_Click"  />
@@ -101,7 +109,7 @@
                     Content="Next" Click="btnVDNext_Click" 
                     VerticalContentAlignment="Center"
                    
-                            HorizontalAlignment="Center"/>
+                            HorizontalAlignment="Center"/>-->
 
                 </StackPanel>
                 <Button Name="btnNoListing" Background="Red" 

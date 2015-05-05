@@ -102,11 +102,15 @@
             <TextBlock Name="tbkEmail" Width="180"  Margin="0,5,0,0"
                         Style="{StaticResource tbks}"/>
             </Border>
-            <StackPanel Orientation="Horizontal" Margin="20">
-                <Button Content="No" Style="{StaticResource btnBack}"
-                                Margin="47,0" Click="Button_Click" />
-                <Button Name="btnConDvrDetsYes" Content="Yes" 
-                        Style="{StaticResource btnNext}" Click="btnConDvrDetsYes_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="20"
+                Width="150">
+                <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
+                          Foreground="Black" Click="btnConDvrDetsNo_Click"/>
+
+                <AppBarButton x:Name="btnNext"
+                                      HorizontalAlignment="Right"
+                                      Foreground="Green" Background="Green"
+                                      Click="btnConDvrDetsYes_Click" Icon="Accept"/>
             </StackPanel>
         </StackPanel>
     </Grid>

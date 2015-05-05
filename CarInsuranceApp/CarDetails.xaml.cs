@@ -45,7 +45,7 @@ namespace CarInsuranceApp
                 var nav = (VehDetsNav)e.Parameter;
                 tbkMake.Text = nav.Make.ToString();
                 //tbkModel.Text = nav.Model.ToString();
-                tbkYear.Text = nav.Year.ToString();
+                //tbkYear.Text = nav.Year.ToString();
                // tbkEng_size.Text = nav.Engine_Size.ToString();
 
             }
@@ -88,10 +88,10 @@ namespace CarInsuranceApp
             //stkConfirmCarDets.Visibility = Visibility.Visible;
         }
 
-        private void btnConfirmDets_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(DriverExpierence));
-        }
+        //private void btnConfirmDets_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(DriverExpierence));
+        //}
 
         //private void btnBack_Click(object sender, RoutedEventArgs e)
         //{
@@ -106,6 +106,11 @@ namespace CarInsuranceApp
         private void btnBack_Click_1(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(DriverExpierence));
         }
 
         

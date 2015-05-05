@@ -88,10 +88,10 @@ namespace CarInsuranceApp
             
                 VehDetsNav nav = new VehDetsNav()
                 {
-                    Make = cmbCarMake.SelectedItem.ToString(),
+                    Make = cmbCarMake.SelectedValue.ToString(),
                     //Model = cmbCarModel.SelectedIndex.ToString(),
-                    //Year = cmbYear.SelectedValue
-                    Engine_Size = Convert.ToDouble(cmbEngSize.SelectedValue)
+                    //Year = Convert.ToInt32(cmbYear.SelectedValue),
+                   // Engine_Size = Convert.ToDouble(cmbEngSize.SelectedValue)
                     
                 };
 

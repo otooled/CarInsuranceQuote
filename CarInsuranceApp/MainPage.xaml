@@ -43,6 +43,7 @@
     </Page.Resources>
 
     <Grid>
+       
         <!--<Grid.ColumnDefinitions>
     		<ColumnDefinition/>
     		<ColumnDefinition Width="15*"/>
@@ -82,11 +83,19 @@
                     Click="btnNext_Click">
                 <Button Content="Next"/> ItemsSource="{Binding}" 
             </Button>-->
-            <Button Name="btnNext" Style="{StaticResource btnNext}" Content="Next"
-                    Click="btnNext_Click" HorizontalAlignment="Center">
+            <!--<Button Name="btnNext" Style="{StaticResource btnNext}" Content="Next"
+                    Click="btnNext_Click" HorizontalAlignment="Center"
+                    >
                
-            </Button>
-                    
+            </Button>-->
+
+            <AppBarButton x:Name="btnNext"
+                                      HorizontalAlignment="Center"
+                                      Foreground="Green" 
+                                      Click="btnNext_Click" Icon="Accept"
+                         
+                          />
+            
             
             <Button Name="btnRetrieve" Content="Retrieve Existing Quote"
                     Click="btnRetrieve_Click" HorizontalAlignment="Center"

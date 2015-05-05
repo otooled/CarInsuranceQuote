@@ -39,7 +39,7 @@ namespace CarInsuranceApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             pgbQuickQuote.Value = 80;
-
+            btnGetQuote.IsEnabled = false;
             
             Calculation clc = new Calculation()
             {
@@ -60,9 +60,23 @@ namespace CarInsuranceApp
             Frame.Navigate(typeof(QuoteDetails), nav);
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void cbxTerms_Checked(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ConfirmDvrDets));
+            if (btnGetQuote.IsEnabled == false)
+            {
+                btnGetQuote.IsEnabled = true;
+            }
+            else
+            {
+                btnGetQuote.IsEnabled = false;
+            }
         }
+
+       
+
+        //private void btnBack_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(ConfirmDvrDets));
+        //}
     }
 }

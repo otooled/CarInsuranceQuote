@@ -97,12 +97,19 @@
                    Click="btnNext_Click" />-->
 
                 <StackPanel Orientation="Horizontal"
-                                Margin="20">
-                    <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
+                                Margin="20" Width="150">
+                    <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
+                          Foreground="Black" Click="btnBack_Click"/>
+
+                    <AppBarButton x:Name="btnNext"
+                                      HorizontalAlignment="Right"
+                                      Foreground="Green" Background="Green"
+                                      Click="btnNext_Click" Icon="Accept"/>
+                    <!--<Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
                                 Margin="47,0" Click="btnBack_Click" />
                     <Button Name="btnNext" Content="Next" Style="{StaticResource btnNext}"
                     HorizontalAlignment="Center"
-                   Click="btnNext_Click" />
+                   Click="btnNext_Click" />-->
                 </StackPanel>
 
             </StackPanel>

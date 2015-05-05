@@ -122,9 +122,12 @@ namespace CarInsuranceApp
             //};
             try
             {
-                GlobalVariables.countyRating = Convert.ToInt32(cmbVehicleLoc.SelectedValue);
-                //var cr = App.Current as App;
-                //cr.countyRating = Convert.ToInt32(cmbVehicleLoc.SelectedItem);
+                Counties c = (Counties)cmbVehicleLoc.SelectedItem;               
+                GlobalVariables.countyRating = c.Premium;//Convert.ToInt32(cmbVehicleLoc.SelectedValue);
+                
+
+                CoverType ct = (CoverType)cmbCoverType.SelectedItem;
+                GlobalVariables.coverRating = ct.CoverTypeValue;
             }
             catch { }
             Frame.Navigate(typeof(CarDetails));

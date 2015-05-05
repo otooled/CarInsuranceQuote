@@ -9,5 +9,9 @@ namespace CarInsuranceApp
     public class GlobalVariables
     {
         public static int countyRating = 0;
+        public static int coverRating = 0;
+        public static int noOfClaims = 0;
+        public static int penPoints = 0;
+        public static int age = 0;
     }
 }

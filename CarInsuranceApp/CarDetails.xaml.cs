@@ -26,9 +26,11 @@ namespace CarInsuranceApp
     {
         private MobileServiceCollection<ServiceClass.ExistingVehicles> vhles;
         private IMobileServiceTable<ServiceClass.ExistingVehicles> ex_vhlesTable = App.MobileService.GetTable<ServiceClass.ExistingVehicles>();
+        
         public CarDetails()
         {
             this.InitializeComponent();
+            
         }
 
         /// <summary>
@@ -36,9 +38,9 @@ namespace CarInsuranceApp
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+           
 
             try
             {
@@ -61,16 +63,19 @@ namespace CarInsuranceApp
            
         }
 
-        private void btnGetCarDets_Click(object sender, RoutedEventArgs e)
+        private async void btnGetCarDets_Click(object sender, RoutedEventArgs e)
         {
+            var cMake = await ex_vhlesTable.ToCollectionAsync();
+            var c = cMake.ToList();
             try
             {
-                var q = vhles.Where(a => a.Reg == tbxCarReg.Text.ToUpper()).FirstOrDefault();
-                if (q.Reg == tbxCarReg.Text)
+                var q =c.Where(a => a.Reg == tbxCarReg.Text.ToUpper()).FirstOrDefault();
+                if  (q != null)
                 {
                     tbkMake.Text = q.Make;
                     tbkModel.Text = q.Model;
                     tbkEng_size.Text = q.Eng_size.ToString();
+                    tbkYear.Text = q.Year.ToString();
                   
                 }
 

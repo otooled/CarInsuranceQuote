@@ -70,7 +70,7 @@ namespace CarInsuranceApp.ServiceClass
     public class NoOfClaims
     {
         public string Id { get; set; }
-        public string ClaimsNum { get; set; }
+        public int ClaimsNum { get; set; }
     }
 
     public class PenPoints

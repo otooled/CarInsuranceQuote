@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarInsuranceApp.ServiceClass;
+using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +24,9 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class QuickQuote : Page
     {
+        
+        private IMobileServiceTable<ServiceClass.Quote> quotes_table = App.MobileService.GetTable<ServiceClass.Quote>();
+        
         public QuickQuote()
         {
             this.InitializeComponent();
@@ -41,14 +46,11 @@ namespace CarInsuranceApp
             pgbQuickQuote.Value = 80;
             btnGetQuote.IsEnabled = false;
             
-            Calculation clc = new Calculation()
-            {
-                county = GlobalVariables.countyRating
-            };
+            
 
         }
 
-        private void btnGetQuote_Click(object sender, RoutedEventArgs e)
+        private async void btnGetQuote_Click(object sender, RoutedEventArgs e)
         {
             var qref = Guid.NewGuid().ToString("N").Substring(0, 6).ToUpper();
             
@@ -58,6 +60,16 @@ namespace CarInsuranceApp
                 q_ref = qref
             };
             Frame.Navigate(typeof(QuoteDetails), nav);
+
+            Calculation clc = new Calculation()
+            {
+                county = GlobalVariables.countyRating,
+                cover_type = GlobalVariables.coverRating,
+                no_of_claims = GlobalVariables.noOfClaims,
+                pen_points = GlobalVariables.penPoints
+            };
+            Quote q = new Quote { f_name = "dave", q_price = 2.5, q_ref = "hhh5hh", sname = "surnaem" };
+            await quotes_table.InsertAsync(q);
         }
 
         private void cbxTerms_Checked(object sender, RoutedEventArgs e)

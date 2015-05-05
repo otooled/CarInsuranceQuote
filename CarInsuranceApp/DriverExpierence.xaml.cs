@@ -106,6 +106,12 @@ namespace CarInsuranceApp
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            NoOfClaims noc = (NoOfClaims)cmbNoOfClaims.SelectedItem;
+            GlobalVariables.noOfClaims = noc.ClaimsNum;
+
+            PenPoints pp = (PenPoints)cmbNoOfPenalty.SelectedItem;
+            GlobalVariables.penPoints = pp.NumOfPoints;
+
             Frame.Navigate(typeof(DriverDetails));
         }
 

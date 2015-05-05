@@ -105,7 +105,10 @@ namespace CarInsuranceApp
                 age = Convert.ToInt16(tbxAge.Text),
                 email = tbxEmail.Text
             };
-            
+
+            //DriverDetails dd = (DriverDetails)tbxAge.Text;
+            //GlobalVariables.age = Convert.ToInt32(dd.tbxAge.Text);
+
             Frame.Navigate(typeof(ConfirmDvrDets), nav);
         }
 

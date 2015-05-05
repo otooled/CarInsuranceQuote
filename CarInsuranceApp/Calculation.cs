@@ -8,7 +8,7 @@ namespace CarInsuranceApp
 {
     public class Calculation
     {
-        public string cover_type { get; set; }
+        public int cover_type { get; set; }
         public int county { get; set; }
         public int pen_points { get; set; }
         public double eng_size { get; set; }

@@ -122,7 +122,7 @@ namespace CarInsuranceApp
             //};
             try
             {
-                Counties c = (Counties)cmbVehicleLoc.SelectedItem;               
+                Counties c = (Counties)cmbVehicleLoc.SelectedItem;                 
                 GlobalVariables.countyRating = c.Premium;//Convert.ToInt32(cmbVehicleLoc.SelectedValue);
                 
 

@@ -34,7 +34,7 @@
         <Style x:Key="btnNext" TargetType="Button">
             <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="#39B7CD"/>
+            <Setter Property="Background" Value="#FF3F59FF"/>
             <Setter Property="FontFamily" Value="BatangChe"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -71,9 +71,13 @@
             <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Enter your quote reference below"
                        Width="300" Height="60" Margin="0,60,0,-5"/>
-            <TextBox Name="tbxAge" Width="110" BorderThickness="1"
-                     BorderBrush="Gray" Margin="0,5"
+            <StackPanel Orientation="Horizontal" Width="250">
+            <TextBox Name="tbxQuote" Width="110" BorderThickness="1"
+                     BorderBrush="Gray" Margin="10,15"
                      PlaceholderText="Quote Ref"/>
+                <Button Name="btnQuoteRetrieval" Content="Get Quote"
+                        Background="#FF3F59FF" Margin="5,5" Click="btnQuoteRetrieval_Click" />
+            </StackPanel>
             <TextBlock Text="Your Name" Style="{StaticResource tbkHeadings}" 
                            Margin="0,0,0,0" Height="40"/>
             <StackPanel Orientation="Horizontal">
@@ -98,9 +102,11 @@
                 <TextBlock Name="tbkYourQuote" Width="100"  Margin="0,5"
                     Style="{StaticResource tbks}"/>
             </Border>
-            <StackPanel Orientation="Horizontal" Margin="20">
-                <Button Content="Back" Style="{StaticResource btnBack}"
-                                Margin="47,0" Click="Button_Click"/>
+            <StackPanel Orientation="Horizontal" Width=" 220">
+                <!--<Button Content="Back" Style="{StaticResource btnBack}"
+                                Margin="47,0" Click="Button_Click"/>-->
+                <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
+                          Foreground="Black" Click="btnBack_Click"/>
                 <Button x:Name="btnContact" Style="{StaticResource btnNext}"
                 			VerticalContentAlignment="Center"
                 			 Content="Contact Us" Click="btnContact_Click"

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace CarInsuranceApp
     /// </summary>
     public sealed partial class RetrieveQuote : Page
     {
+        private IMobileServiceTable<ServiceClass.Quote> quotes_table = App.MobileService.GetTable<ServiceClass.Quote>();
+
         public RetrieveQuote()
         {
             this.InitializeComponent();
@@ -46,9 +49,39 @@ namespace CarInsuranceApp
             Frame.Navigate(typeof(ContactUs));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+           
+        //}
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void btnQuoteRetrieval_Click(object sender, RoutedEventArgs e)
+        {
+
+            var qtes = await quotes_table.ToCollectionAsync();
+            var q_t = qtes.ToList();
+            try
+            {
+               // var q = q_t.Where(a => a.q_ref == tbxQuote.Text.to)
+                var q = q_t.Where(a => a.q_ref == tbxQuote.Text.ToUpper()).FirstOrDefault();
+                if (q != null)
+                {
+                    tbkFname.Text = q.f_name;
+                    tbkSname.Text = q.sname;
+                    tbkYourQuote.Text = q.q_price.ToString();
+
+                }
+
+            }
+
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

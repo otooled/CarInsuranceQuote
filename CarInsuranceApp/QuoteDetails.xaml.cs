@@ -36,6 +36,7 @@ namespace CarInsuranceApp
         {
             var nav = (QuoteNav)e.Parameter;
             tbkDisplayQuoteRef.Text = nav.q_ref;
+            tbkDisplayQuote.Text = nav.q_price.ToString();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

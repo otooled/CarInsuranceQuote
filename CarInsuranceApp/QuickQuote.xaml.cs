@@ -52,24 +52,40 @@ namespace CarInsuranceApp
 
         private async void btnGetQuote_Click(object sender, RoutedEventArgs e)
         {
+            double totalQuoteCost = 300;
+
             var qref = Guid.NewGuid().ToString("N").Substring(0, 6).ToUpper();
             
 
-            QuoteNav nav = new QuoteNav()
-            {
-                q_ref = qref
-            };
-            Frame.Navigate(typeof(QuoteDetails), nav);
+            
 
             Calculation clc = new Calculation()
             {
                 county = GlobalVariables.countyRating,
                 cover_type = GlobalVariables.coverRating,
                 no_of_claims = GlobalVariables.noOfClaims,
-                pen_points = GlobalVariables.penPoints
+                pen_points = GlobalVariables.penPoints,
+                year = GlobalVariables.carYear,
+                eng_size = GlobalVariables.eng_size,
+                age = GlobalVariables.age
             };
-            Quote q = new Quote { f_name = "dave", q_price = 2.5, q_ref = "hhh5hh", sname = "surnaem" };
-            await quotes_table.InsertAsync(q);
+
+            if (clc.age < 25 && clc.eng_size >1.3)
+            {
+                totalQuoteCost = totalQuoteCost + 350;
+                
+            }
+
+            QuoteNav nav = new QuoteNav()
+            {
+                q_ref = qref,
+                q_price = totalQuoteCost
+
+            };
+            Frame.Navigate(typeof(QuoteDetails), nav);
+
+            //Quote q = new Quote { f_name = "dave", q_price = 2.5, q_ref = "hhh5hh", sname = "surnaem" };
+            //await quotes_table.InsertAsync(q);
         }
 
         private void cbxTerms_Checked(object sender, RoutedEventArgs e)

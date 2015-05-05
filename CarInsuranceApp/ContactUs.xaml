@@ -45,13 +45,14 @@
     <Grid>
         <StackPanel>
             <ProgressBar Name="pgbConDrvDets" Width="200" Height="20"
-              Foreground="LightGreen" Background="Gray" Margin="20"/>
+              Foreground="LightGreen" Background="White" Margin="20"
+                         Visibility="Visible"/>
             <Border Width="250" HorizontalAlignment="Center" Background="#FF3F59FF"
                     CornerRadius="15">
                 <TextBlock Style="{StaticResource tbkPageTitles}" >  
-                  <Run Text="Driver Details"/>
+                  <Run Text="Contact Us"/>
                     <LineBreak/>
-                    <Run Text="Confirmation"/>
+                    <Run Text="Inforrmation"/>
                 </TextBlock>
             </Border>
             <TextBlock Style="{StaticResource tbkHeadings}"
@@ -78,10 +79,10 @@
                 </TextBlock>
             </Border>
             <StackPanel Orientation="Horizontal"
-                                Margin="20,50">
+                                Margin="20,50"
+                        Width="110">
 
-                <Button Name="btnBack" Content="Back" Style="{StaticResource btnBack}"
-                                Margin="47,0" Click="btnBack_Click"/>
+               
                 <Button x:Name="btnConNext" Style="{StaticResource btnNext}"
                     Content="Home" Click="btnConNext_Click"
                     VerticalContentAlignment="Center"                   

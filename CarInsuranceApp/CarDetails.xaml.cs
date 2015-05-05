@@ -47,8 +47,8 @@ namespace CarInsuranceApp
                 var nav = (VehDetsNav)e.Parameter;
                 tbkMake.Text = nav.Make.ToString();
                 //tbkModel.Text = nav.Model.ToString();
-                //tbkYear.Text = nav.Year.ToString();
-               // tbkEng_size.Text = nav.Engine_Size.ToString();
+                tbkYear.Text = nav.Year.ToString();
+                tbkEng_size.Text = nav.Engine_Size.ToString();
 
             }
             catch
@@ -69,6 +69,7 @@ namespace CarInsuranceApp
             var c = cMake.ToList();
             try
             {
+
                 var q =c.Where(a => a.Reg == tbxCarReg.Text.ToUpper()).FirstOrDefault();
                 if  (q != null)
                 {
@@ -115,6 +116,14 @@ namespace CarInsuranceApp
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                //CarDetails cy = Convert.ToInt32(tbkYear.Text);
+                GlobalVariables.carYear = Convert.ToInt32(tbkYear.Text);
+                GlobalVariables.eng_size = Convert.ToDouble(tbkEng_size.Text);
+            }
+            catch { }
+
             Frame.Navigate(typeof(DriverExpierence));
         }
 

@@ -9,5 +9,6 @@ namespace CarInsuranceApp
     public class QuoteNav
     {
         public string q_ref { get; set; }
+        public double q_price { get; set; }
     }
 }

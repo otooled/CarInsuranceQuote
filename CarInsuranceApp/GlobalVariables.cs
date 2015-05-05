@@ -13,5 +13,7 @@ namespace CarInsuranceApp
         public static int noOfClaims = 0;
         public static int penPoints = 0;
         public static int age = 0;
+        public static int carYear = 0;
+        public static double eng_size = 0;
     }
 }

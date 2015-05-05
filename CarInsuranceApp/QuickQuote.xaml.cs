@@ -84,8 +84,8 @@ namespace CarInsuranceApp
             };
             Frame.Navigate(typeof(QuoteDetails), nav);
 
-            //Quote q = new Quote { f_name = "dave", q_price = 2.5, q_ref = "hhh5hh", sname = "surnaem" };
-            //await quotes_table.InsertAsync(q);
+            Quote q = new Quote { q_ref = qref, f_name = GlobalVariables.f_name, sname = GlobalVariables.sname, q_price = totalQuoteCost };
+            await quotes_table.InsertAsync(q);
         }
 
         private void cbxTerms_Checked(object sender, RoutedEventArgs e)

@@ -106,7 +106,8 @@ namespace CarInsuranceApp
                 email = tbxEmail.Text
             };
 
-            
+            GlobalVariables.f_name = tbxFname.Text;
+            GlobalVariables.sname = tbxSname.Text;
             GlobalVariables.age = Convert.ToInt32(tbxAge.Text);
 
             Frame.Navigate(typeof(ConfirmDvrDets), nav);

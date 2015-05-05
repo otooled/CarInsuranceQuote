@@ -44,6 +44,10 @@ namespace CarInsuranceApp
             {
                 var nav = (VehDetsNav)e.Parameter;
                 tbkMake.Text = nav.Make.ToString();
+                //tbkModel.Text = nav.Model.ToString();
+                tbkYear.Text = nav.Year.ToString();
+               // tbkEng_size.Text = nav.Engine_Size.ToString();
+
             }
             catch
             {
@@ -89,14 +93,19 @@ namespace CarInsuranceApp
             Frame.Navigate(typeof(DriverExpierence));
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
+        //private void btnBack_Click(object sender, RoutedEventArgs e)
+        //{
+            
+        //}
 
         private void hplCarReg_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(VehicleDetails));
+        }
+
+        private void btnBack_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
 
         

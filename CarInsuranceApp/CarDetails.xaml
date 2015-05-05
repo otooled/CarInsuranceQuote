@@ -50,7 +50,8 @@
     </Page.Resources>
     <ScrollViewer>
         <Grid>
-
+            <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
+                          Foreground="Black" Click="btnBack_Click_1"/>
             <StackPanel>
                 <ProgressBar Name="pgbCarDets" Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>
@@ -98,7 +99,7 @@
                     <Border Width="200" Height="50" BorderThickness="2"
                 		BorderBrush="Gray" CornerRadius="4">
                         <TextBlock x:Name="tbkModel" Width="200"
-                			Height="50"/>
+                			Height="50" Foreground="Black"/>
                     </Border>
                     <TextBlock Style="{StaticResource tbkHeadings}"
                 		Text="Engine"
@@ -106,15 +107,15 @@
                     <Border Width="200" Height="50" BorderThickness="2"
                 		BorderBrush="Gray" CornerRadius="4">
                         <TextBlock x:Name="tbkEng_size" Width="200"
-                			Height="50"/>
+                			Height="50" Foreground="Black"/>
                     </Border>
                     <TextBlock Style="{StaticResource tbkHeadings}"
                 		Text="Year"
-                		Width="100" Height="50"/>
+                		Width="100" Height="50" />
                     <Border Width="200" Height="50" BorderThickness="2"
                 		BorderBrush="Gray" CornerRadius="4">
                         <TextBlock x:Name="tbkYear" Width="200"
-                			Height="50"/>
+                			Height="50" Foreground="Black"/>
                     </Border>
 
                     <TextBlock Style="{StaticResource tbkHeadings}"
@@ -122,14 +123,14 @@
                     <StackPanel Orientation="Horizontal"
                 		Margin="20,0">
 
-                        <Button x:Name="btnBack" 
+                        <!--<Button x:Name="btnBack" 
                 			Margin="47,0" Click="btnBack_Click" >
                             <StackPanel Background="Beige">
                                 <Image Height="50" Width="100" Source="Images\back-button.png" Style="{StaticResource backImage}"
                                  
                         />
                             </StackPanel>
-                        </Button>
+                        </Button>-->
 
                         <Button x:Name="btnConfirmDets" Style="{StaticResource btnNext}"
                 			VerticalContentAlignment="Center"

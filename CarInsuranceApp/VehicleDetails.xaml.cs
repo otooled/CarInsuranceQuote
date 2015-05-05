@@ -85,11 +85,18 @@ namespace CarInsuranceApp
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)
         {
-            VehDetsNav nav = new VehDetsNav()
-            {
-                Make = cmbCarMake.SelectedItem.ToString()
-            };
+            
+                VehDetsNav nav = new VehDetsNav()
+                {
+                    Make = cmbCarMake.SelectedItem.ToString(),
+                    //Model = cmbCarModel.SelectedIndex.ToString(),
+                    //Year = cmbYear.SelectedValue
+                    Engine_Size = Convert.ToDouble(cmbEngSize.SelectedValue)
+                    
+                };
 
+                
+            
             Frame.Navigate(typeof(CarDetails), nav);
         }
 

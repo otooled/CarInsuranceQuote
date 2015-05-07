@@ -46,11 +46,16 @@
             <Setter Property="VerticalContentAlignment" Value="Center"/>
 
         </Style>
+        <Style x:Name="tbks" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
 
     </Page.Resources>
     <ScrollViewer>
         <Grid>
-            
+            <ProgressRing Name="spinIcon" IsActive="True"></ProgressRing>
             <StackPanel>
                 <ProgressBar Name="pgbCarDets" Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>
@@ -83,51 +88,63 @@
                 <StackPanel x:Name="stkConfirmCarDets" >
                     <TextBlock Style="{StaticResource tbkHeadings}"
                 		Text="Are these details correct?"
-                		Width="300" Height="60"/>
+                		Width="300" Height="60" Visibility="Collapsed"
+                               Name="tbkConfirmTitle"/>
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                		Text="Make"
-                		Width="100" Height="50"/>
-                    <Border Width="200" Height="50" BorderThickness="2"
-                		BorderBrush="Gray" CornerRadius="4">
+                		Text="Make" Name="tbkMakeTitle"
+                		Width="100" Height="50" Visibility="Collapsed"/>
+                    <Border Width="200" Height="50" BorderThickness="2" Name="bdrMake"
+                		BorderBrush="Blue" CornerRadius="4" Visibility="Collapsed">
                         <TextBlock x:Name="tbkMake" Width="200"
-                			Height="50" Foreground="Black"/>
+                			Height="50" Foreground="Black"
+                                 Visibility="Collapsed"  Style="{StaticResource tbks}"/>
                     </Border>
                     <TextBlock Style="{StaticResource tbkHeadings}"
                 		Text="Model"
-                		Width="100" Height="50"/>
+                		Width="100" Height="50"
+                               Visibility="Collapsed" Name="tbkModelTitle"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                		BorderBrush="Gray" CornerRadius="4">
+                		BorderBrush="Blue" CornerRadius="4" Visibility="Collapsed"
+                            Name="bdrModel">
                         <TextBlock x:Name="tbkModel" Width="200"
-                			Height="50" Foreground="Black"/>
+                			Height="50" Foreground="Black" Visibility="Collapsed"
+                                   Style="{StaticResource tbks}"/>
                     </Border>
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                		Text="Engine"
-                		Width="100" Height="50"/>
+                		Text="Engine" Name="tbkEngineTitle"
+                		Width="100" Height="50" Visibility="Collapsed"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                		BorderBrush="Gray" CornerRadius="4">
+                		BorderBrush="Blue" CornerRadius="4" Visibility="Collapsed"
+                            Name="bdrEngine">
                         <TextBlock x:Name="tbkEng_size" Width="200"
-                			Height="50" Foreground="Black"/>
+                			Height="50" Foreground="Black" Visibility="Collapsed"
+                                   Style="{StaticResource tbks}"/>
                     </Border>
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                		Text="Year"
-                		Width="100" Height="50" />
+                		Text="Year" Name="tbkYearTitle"
+                		Width="100" Height="50" Visibility="Collapsed"/>
                     <Border Width="200" Height="50" BorderThickness="2"
-                		BorderBrush="Gray" CornerRadius="4">
+                		BorderBrush="Blue" CornerRadius="4" Visibility="Collapsed"
+                            Name="bdrYear">
                         <TextBlock x:Name="tbkYear" Width="200"
-                			Height="50" Foreground="Black"/>
+                			Height="50" Foreground="Black" Visibility="Collapsed"
+                                   Style="{StaticResource tbks}"/>
                     </Border>
 
                     <TextBlock Style="{StaticResource tbkHeadings}"
-                		Text="Click Yes to continue"/>
+                		Text="Click Yes to continue" Name="tbkContinueTitle"
+                               Visibility="Collapsed"/>
                     <StackPanel Orientation="Horizontal"
-                		Width="150">
+                		Width="150" >
                         <AppBarButton x:Name="btnBack" HorizontalAlignment="Left" Icon="Back" Background="Black"
-                          Foreground="Black" Click="btnBack_Click_1"/>
+                          Foreground="Black" Click="btnBack_Click_1"
+                                      Visibility="Collapsed"/>
 
                         <AppBarButton x:Name="btnNext"
                                       HorizontalAlignment="Right"
                                       Foreground="Green" Background="Green"
-                                      Click="btnNext_Click" Icon="Accept"/>
+                                      Click="btnNext_Click" Icon="Accept"
+                                      Visibility="Collapsed"/>
                         <!--<Button x:Name="btnBack" 
                 			Margin="47,0" Click="btnBack_Click" >
                             <StackPanel Background="Beige">

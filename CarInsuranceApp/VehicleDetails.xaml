@@ -50,7 +50,7 @@
     </Page.Resources>
     <ScrollViewer>
         <Grid>
-
+            <ProgressRing Name="spinIcon" IsActive="True"></ProgressRing>
             <StackPanel Margin="-10,0,10,0">
                 <ProgressBar Name="pgbCarDets" Width="200" Height="20"
               Foreground="LightGreen" Background="Gray" Margin="20"/>

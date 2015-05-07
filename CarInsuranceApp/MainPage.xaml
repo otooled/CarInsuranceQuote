@@ -43,7 +43,7 @@
     </Page.Resources>
 
     <Grid>
-       
+        <ProgressRing Name="spinIcon" IsActive="True"></ProgressRing>
         <!--<Grid.ColumnDefinitions>
     		<ColumnDefinition/>
     		<ColumnDefinition Width="15*"/>

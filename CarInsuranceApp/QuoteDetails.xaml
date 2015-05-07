@@ -39,7 +39,11 @@
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
-
+        <Style x:Name="tbks" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="BatangChe"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
     </Page.Resources>
     <ScrollViewer>
         <Grid>
@@ -62,17 +66,19 @@
                 <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
                     <TextBlock Name="tbkMake" Width="200"
-                       Height="50" Foreground="Black"/>
+                       Height="50" Foreground="Black"
+                               Style="{StaticResource tbks}"/>
                 </Border>
                 <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
-                    <TextBlock Name="tbkModel" Width="200"
-                       Height="50"/>
+                    <TextBlock Name="tbkModel" Width="200" Foreground="Black"
+                       Height="50" Style="{StaticResource tbks}"/>
                 </Border>
                 <Border Width="200" Height="50" BorderThickness="2"
                     BorderBrush="Gray" CornerRadius="4">
-                    <TextBlock Name="tbkEng_size" Width="200"
-                       Height="50"/>
+                    <TextBlock Name="tbkYear" Width="200"
+                       Height="50" Style="{StaticResource tbks}"
+                               Foreground="Black"/>
                 </Border>
                 <Border>
                     <TextBlock Text="Your Quote" Style="{StaticResource tbkHeadings}" 

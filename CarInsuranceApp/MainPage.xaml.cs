@@ -82,10 +82,18 @@ namespace CarInsuranceApp
 
             cmbCoverType.DataContext = cvrTyp;
 
-            
-        
-            //Counties a = new Counties { Name = "Galway", Premium = 2 };
-          // await counties_table.InsertAsync(a);
+            if(cmbVehicleLoc != null  )
+            {
+                spinIcon.IsActive = false;
+            }
+
+            if (cmbVehicleLoc != null)
+            {
+                spinIcon.IsActive = false;
+            }
+
+            //Counties a = new Counties { Name = "Sligo", Premium = 3 };
+            //await counties_table.InsertAsync(a);
           
             
            

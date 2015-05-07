@@ -41,7 +41,10 @@ namespace CarInsuranceApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            if (tbkFname.Text == "" || tbkSname.Text == "" || tbxQuote.Text == "")
+            {
+                spinIcon.IsActive = false;
+            }
         }
 
         private void btnContact_Click(object sender, RoutedEventArgs e)
@@ -61,6 +64,7 @@ namespace CarInsuranceApp
 
         private async void btnQuoteRetrieval_Click(object sender, RoutedEventArgs e)
         {
+           
 
             var qtes = await quotes_table.ToCollectionAsync();
             var q_t = qtes.ToList();
@@ -74,6 +78,14 @@ namespace CarInsuranceApp
                     tbkSname.Text = q.sname;
                     tbkYourQuote.Text = q.q_price.ToString();
 
+                }
+                if (tbkFname.Text == "" || tbkSname.Text == "" || tbxQuote.Text == "")
+                {
+                    spinIcon.IsActive = true;
+                }
+                else
+                {
+                    spinIcon.IsActive = false;
                 }
 
             }

@@ -84,7 +84,7 @@
                            Margin="0,0,0,0" Height="40"/>
             <TextBox Name="tbxEmail" Width="180" BorderThickness="1"
                      BorderBrush="Gray" Margin="0,5,0,0"
-                        PlaceholderText="Email" />
+                        PlaceholderText="Email" InputScope="EmailSmtpAddress" />
            
             <TextBlock Style="{StaticResource tbkHeadings}"
                        Text="Click Next to Continue" Margin="0,20,0,-10"

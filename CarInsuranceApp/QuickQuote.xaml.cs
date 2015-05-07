@@ -70,10 +70,21 @@ namespace CarInsuranceApp
                 age = GlobalVariables.age
             };
 
-            if (clc.age < 25 && clc.eng_size >1.3)
+            if (clc.age < 25 && clc.eng_size >1.3 || clc.county >= 3)
             {
-                totalQuoteCost = totalQuoteCost + 350;
+                totalQuoteCost = totalQuoteCost + 150;
                 
+            }
+
+            if (clc.age > 25 && clc.eng_size < 1.3 || clc.county <= 1 || clc.pen_points < 5)
+            {
+                totalQuoteCost = totalQuoteCost - 50;
+
+            }
+
+            if(clc.age > 25 && clc.eng_size < 1.3 || clc.county <= 1 || clc.pen_points < 5 || clc.no_of_claims >=3)
+            {
+                totalQuoteCost = totalQuoteCost + 75;
             }
 
             QuoteNav nav = new QuoteNav()

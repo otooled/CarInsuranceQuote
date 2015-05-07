@@ -81,6 +81,21 @@ namespace CarInsuranceApp
                 man_year.Add(items);
             }
             cmbYear.DataContext = man_year;
+
+            if (cmbCarMake != null)
+            {
+                spinIcon.IsActive = false;
+            }
+
+            if (cmbEngSize != null)
+            {
+                spinIcon.IsActive = false;
+            }
+
+            if (cmbYear != null)
+            {
+                spinIcon.IsActive = false;
+            }
         }
 
         private void btnVDNext_Click(object sender, RoutedEventArgs e)

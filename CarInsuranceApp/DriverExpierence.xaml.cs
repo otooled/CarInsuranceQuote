@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -101,16 +102,34 @@ namespace CarInsuranceApp
             //}
             //cmbLicence.DataContext = lt;
                  
+            if (cmbNoOfClaims != null)
+            {
+                spinIcon.IsActive = false;
+            }
 
+            if (cmbNoOfPenalty != null)
+            {
+                spinIcon.IsActive = false;
+            }
+        
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            if (cmbNoOfClaims.SelectedValue == null || cmbNoOfPenalty.SelectedValue == null)
+            {
+                MessageDialog msg = new MessageDialog("Both options must be selected");
+                msg.ShowAsync();
+                return;
+            }  
+
             NoOfClaims noc = (NoOfClaims)cmbNoOfClaims.SelectedItem;
             GlobalVariables.noOfClaims = noc.ClaimsNum;
 
             PenPoints pp = (PenPoints)cmbNoOfPenalty.SelectedItem;
             GlobalVariables.penPoints = pp.NumOfPoints;
+
+           
 
             Frame.Navigate(typeof(DriverDetails));
         }

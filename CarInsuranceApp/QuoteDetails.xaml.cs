@@ -42,11 +42,18 @@ namespace CarInsuranceApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             pgbQuoteDetails.Value = 100;
+
+            tbkMake.Text = GlobalVariables.car_make;
+            tbkModel.Text = GlobalVariables.car_model;
+            tbkYear.Text = GlobalVariables.carYear.ToString();
+            
         }
 
         private void btnFinish_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+       
     }
 }

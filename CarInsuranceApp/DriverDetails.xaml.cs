@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Popups;
+using System.Text.RegularExpressions;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -52,13 +53,12 @@ namespace CarInsuranceApp
 
             }
         }
-        
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             pgbDriverDetails.Value = 48;
-            
-           
+
         }
 
         private void btnDDNext_Click(object sender, RoutedEventArgs e)
@@ -109,6 +109,16 @@ namespace CarInsuranceApp
             GlobalVariables.f_name = tbxFname.Text;
             GlobalVariables.sname = tbxSname.Text;
             GlobalVariables.age = Convert.ToInt32(tbxAge.Text);
+
+            Match match = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Match(tbxEmail.Text);
+
+            if (match.Success == false)
+            {
+                MessageDialog msg = new MessageDialog("Invalid Email");
+                msg.ShowAsync();
+                return;               
+            }
+           
 
             Frame.Navigate(typeof(ConfirmDvrDets), nav);
         }

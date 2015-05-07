@@ -18,5 +18,8 @@ namespace CarInsuranceApp
 
         public static string f_name = "";
         public static string sname = "";
+
+        public static string car_make = "";
+        public static string car_model = "";
     }
 }

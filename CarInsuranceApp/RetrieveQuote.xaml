@@ -55,6 +55,7 @@
         </Style>
     </Page.Resources>
     <Grid>
+        <ProgressRing Name="spinIcon" IsActive="True"></ProgressRing>
         <StackPanel>
             <ProgressBar Name="pgbDriverDetails"
                          Width="200" Height="20"

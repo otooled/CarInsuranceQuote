@@ -1,41 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="82d13cee-8e27-4125-9868-152279a11c65"
-            Publisher="CN=David"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="82d13cee-8e27-4125-9868-152279a11c65" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="19359PaulShiels.QuickQuoteCarInsurance" Publisher="CN=80237E84-E7D5-4697-A6AB-B37C546F9355" Version="1.1.0.7" />
+  <mp:PhoneIdentity PhoneProductId="c474fb7c-1d8d-478f-bb73-70c77acbc193" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>CarInsuranceApp</DisplayName>
-    <PublisherDisplayName>David</PublisherDisplayName>
+    <DisplayName>Quick Quote Car Insurance</DisplayName>
+    <PublisherDisplayName>Paul Shiels</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="CarInsuranceApp.App">
-        <m3:VisualElements
-            DisplayName="CarInsuranceApp"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\carlogo.png"
-            Description="CarInsuranceApp"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\carlogo.png"/>
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CarInsuranceApp.App">
+      <m3:VisualElements DisplayName="Quick Quote Car Insurance" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\carlogo - 44.png" Description="CarInsuranceApp" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\insurance_policy.jpg" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>

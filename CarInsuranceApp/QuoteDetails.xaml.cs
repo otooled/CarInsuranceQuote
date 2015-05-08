@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -51,6 +52,38 @@ namespace CarInsuranceApp
 
         private void btnFinish_Click(object sender, RoutedEventArgs e)
         {
+           // EmailRecipient sendTo = new EmailRecipient()
+
+        //    {
+
+
+        //        Address = "otoole0david@gmail.com"
+
+        //    };
+        //    //predefine Recipient
+
+
+        //    //generate mail object
+
+        //    EmailMessage mail = new EmailMessage();
+
+        //    mail.Subject = "this is the Subject";
+
+
+        //    mail.Body = "this is the Body";
+
+
+
+        //    //add recipients to the mail object
+
+        //    mail.To.Add(sendTo);
+
+        //    //mail.Bcc.Add(sendTo);
+        //    //mail.CC.Add(sendTo);
+        //    //open the share contract with Mail only:
+
+        //    await EmailManager.ShowComposeNewEmailAsync(mail);
+        //}
             Frame.Navigate(typeof(MainPage));
         }
 

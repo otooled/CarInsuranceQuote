@@ -1,0 +1,4 @@
+MainPackage=C:\Users\David\Desktop\CarInsuranceApp\CarInsuranceApp\bin\Release\CarInsuranceApp_1.1.0.7_Bundle\CarInsuranceApp_1.1.0.7_AnyCPU.appx
+SymbolPackage=C:\Users\David\Desktop\CarInsuranceApp\CarInsuranceApp\AppPackages\CarInsuranceApp_1.1.0.7_Test\CarInsuranceApp_1.1.0.7_AnyCPU.appxsym
+ResourcePack=C:\Users\David\Desktop\CarInsuranceApp\CarInsuranceApp\bin\Release\CarInsuranceApp_1.1.0.7_Bundle\CarInsuranceApp_1.1.0.7_scale-100.appx
+ResourcePack=C:\Users\David\Desktop\CarInsuranceApp\CarInsuranceApp\bin\Release\CarInsuranceApp_1.1.0.7_Bundle\CarInsuranceApp_1.1.0.7_scale-140.appx

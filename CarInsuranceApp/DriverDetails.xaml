@@ -79,7 +79,7 @@
                             Height="40" Width="220"/>
             <TextBox Name="tbxAge" Width="100" BorderThickness="1"
                      BorderBrush="Gray" Margin="0,5"
-                     PlaceholderText="Age"/>
+                     PlaceholderText="Age" InputScope="Number"/>
             <TextBlock Text="Email Address" Style="{StaticResource tbkHeadings}" 
                            Margin="0,0,0,0" Height="40"/>
             <TextBox Name="tbxEmail" Width="180" BorderThickness="1"
